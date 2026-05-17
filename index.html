@@ -17,11 +17,10 @@
                     },
                     colors: {
                         brand: {
-                            royalBlue: '#004B93',   /* Vibrant card body blue */
-                            deepNavy: '#002244',    /* Dark card profile blue */
-                            leafGreen: '#76BC21',   /* Exact card branding green */
-                            skyBlue: '#00A4E4',     /* Icon sky blue */
-                            lightBg: '#F4F7FA'       /* Light clean backdrop */
+                            bgDeep: '#002B54',      /* Exact matching blue from your logo background */
+                            bgDark: '#001A33',      /* Softer depth blue */
+                            leafGreen: '#76BC21',   /* Premium leaf green from business card */
+                            skyBlue: '#00A4E4'       /* Clean corporate accent blue */
                         }
                     }
                 }
@@ -30,133 +29,163 @@
     </script>
     <style>
         body {
-            background: linear-gradient(135deg, #F4F7FA 0%, #E2E8F0 100%);
+            background: linear-gradient(180deg, #002B54 0%, #001A33 100%);
             font-family: 'Inter', sans-serif;
         }
         ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #F4F7FA; }
+        ::-webkit-scrollbar-track { background: #001A33; }
         ::-webkit-scrollbar-thumb { background: #004B93; border-radius: 10px; }
     </style>
 </head>
-<body class="text-slate-800 antialiased min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 pb-28 sm:pb-12">
+<body class="text-slate-100 antialiased min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 pb-28 sm:pb-12">
 
-    <main class="w-full max-w-4xl mx-auto shadow-2xl rounded-2xl border border-slate-200 overflow-hidden bg-white grid grid-cols-1 sm:grid-cols-12 min-h-[550px]">
+    <main class="w-full max-w-4xl mx-auto shadow-2xl rounded-2xl border border-white/10 overflow-hidden bg-gradient-to-b from-white/5 to-black/20 backdrop-blur-md">
         
-        <div class="sm:col-span-5 bg-white p-6 md:p-8 flex flex-col justify-between border-b sm:border-b-0 sm:border-r border-slate-100">
-            <div>
-                <div class="flex flex-col items-center sm:items-start gap-3 mb-6">
-                    <img src="logo%20ASC.png" alt="Amiri Solar Cleaning" class="h-28 w-28 object-contain drop-shadow-md mb-2">
-                    <div>
-                        <h3 class="text-xl font-bold text-brand-deepNavy tracking-tight">Sarah Jenkins</h3>
-                        <p class="text-xs text-brand-skyBlue font-bold uppercase tracking-wider mt-0.5">Scheduling Coordinator</p>
-                    </div>
+        <div class="w-full bg-black/40 px-6 py-4 border-b border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <img src="logo%20ASC.png" alt="Amiri Solar Cleaning" class="h-12 w-12 object-contain rounded-xl bg-white/5 p-1 shadow-md border border-white/5">
+                <div>
+                    <h1 class="text-xl font-bold text-white tracking-tight leading-tight">
+                        Amiri<span class="text-brand-leafGreen">Solar</span>Cleaning
+                    </h1>
+                    <p class="text-xs text-brand-skyBlue font-medium tracking-wide">Professional Maintenance Solutions</p>
                 </div>
-
-                <h2 class="text-xl font-bold text-brand-leafGreen mb-4 tracking-tight leading-tight border-t border-slate-100 pt-4">
-                    Inspection and cleaning slot hold
-                </h2>
-
-                <div class="space-y-3 my-5 text-sm text-slate-600 flex flex-col items-center sm:items-start">
-                    <div class="flex items-center gap-3">
-                        <svg class="w-4 h-4 text-brand-skyBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <span class="font-semibold text-brand-deepNavy">45 Minute Session</span>
-                    </div>
-                </div>
-
-                <p class="text-xs text-slate-500 leading-relaxed font-normal">
-                    Choose a convenient window for your inspection and cleaning. A representative will contact you directly to confirm service logistics and location.
-                </p>
             </div>
-
-            <div class="mt-8 pt-5 border-t border-slate-100 space-y-3.5 text-xs text-slate-500">
-                <div class="flex items-center justify-between">
-                    <span>Mutual availability system</span>
-                    <label class="relative inline-flex items-center cursor-pointer">
-                        <input type="checkbox" class="sr-only peer" checked disabled>
-                        <div class="w-7 h-4 bg-slate-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-brand-leafGreen"></div>
-                    </label>
-                </div>
-                <div class="flex items-center justify-between">
-                    <span>Target Timezone</span>
-                    <span class="text-brand-deepNavy font-medium">(-07:00) PDT - Los Angeles</span>
-                </div>
+            
+            <div class="flex flex-wrap justify-center md:justify-end gap-1.5 text-[10px] font-bold uppercase tracking-wider">
+                <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-slate-300 flex items-center gap-1.5">
+                    <span class="w-1 h-1 rounded-full bg-brand-skyBlue animate-pulse"></span> Spotless
+                </span>
+                <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-slate-300 flex items-center gap-1.5">
+                    <span class="w-1 h-1 rounded-full bg-brand-skyBlue"></span> Protection
+                </span>
+                <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-slate-300 flex items-center gap-1.5">
+                    <span class="w-1 h-1 rounded-full bg-brand-leafGreen"></span> Eco-Friendly
+                </span>
+                <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-slate-300 flex items-center gap-1.5">
+                    <span class="w-1 h-1 rounded-full bg-brand-leafGreen"></span> Max Output
+                </span>
             </div>
         </div>
 
-        <div class="sm:col-span-7 bg-gradient-to-b from-brand-royalBlue to-brand-deepNavy p-6 md:p-8 flex flex-col justify-between text-white min-h-[460px]">
+        <div class="w-full grid grid-cols-1 sm:grid-cols-12 overflow-hidden">
             
-            <div id="calendar-view" class="space-y-6 flex flex-col justify-between h-full">
+            <div class="sm:col-span-5 bg-black/15 p-6 md:p-8 border-b sm:border-b-0 sm:border-r border-white/10 flex flex-col justify-between items-center sm:items-start text-center sm:text-left">
                 <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-base font-semibold text-white tracking-wide" id="month-year-label">May 2026</h3>
-                        <div class="flex gap-1.5">
-                            <button id="prev-month" class="p-1.5 rounded-lg bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:bg-white/10 transition">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                            </button>
-                            <button id="next-month" class="p-1.5 rounded-lg bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:bg-white/10 transition">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                            </button>
+                    <div class="flex flex-col items-center sm:items-start gap-2 mb-6">
+                        <img src="logo%20ASC.png" alt="Amiri Solar Cleaning" class="h-28 w-28 object-contain drop-shadow-xl">
+                        <div class="mt-2">
+                            <h3 class="text-xl font-bold text-white tracking-wide">Sarah Jenkins</h3>
+                            <p class="text-xs text-brand-skyBlue font-semibold uppercase tracking-wider mt-0.5">Scheduling Coordinator</p>
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-white/60 mb-2.5 tracking-wider">
-                        <div>SUN</div><div>MON</div><div>TUE</div><div>WED</div><div>THU</div><div>FRI</div><div>SAT</div>
+                    <h2 class="text-lg font-bold text-brand-leafGreen mb-4 tracking-tight leading-tight border-t border-white/5 pt-4">
+                        Inspection and cleaning slot hold
+                    </h2>
+
+                    <div class="space-y-3 my-5 text-sm text-slate-200 flex flex-col items-center sm:items-start">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-4 h-4 text-brand-skyBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="font-medium text-slate-300">45 Minute Session</span>
+                        </div>
                     </div>
 
-                    <div class="grid grid-cols-7 gap-1 text-center text-sm font-medium" id="calendar-days"></div>
+                    <p class="text-xs text-slate-300 leading-relaxed font-light max-w-sm sm:max-w-none">
+                        Choose a convenient window for your inspection and cleaning. A representative will contact you directly to confirm service logistics and location.
+                    </p>
                 </div>
 
-                <div class="mt-4 pt-4 border-t border-white/10">
-                    <p class="text-xs font-semibold uppercase tracking-wider text-white/70 mb-2.5" id="slots-header">Available Slots</p>
-                    <div class="grid grid-cols-2 gap-2" id="slots-container"></div>
+                <div class="mt-8 pt-5 border-t border-white/5 space-y-3.5 w-full text-xs">
+                    <div class="flex items-center justify-between">
+                        <span class="text-slate-400">Mutual availability system</span>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" class="sr-only peer" checked disabled>
+                            <div class="w-7 h-4 bg-slate-800 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-brand-leafGreen"></div>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-slate-400">Target Timezone</span>
+                        <span class="text-white font-medium">(-07:00) PDT - Los Angeles</span>
+                    </div>
                 </div>
             </div>
 
-            <div id="form-view" class="hidden h-full flex flex-col justify-between text-slate-200">
-                <div>
-                    <button id="back-to-calendar" class="text-xs font-medium text-brand-skyBlue hover:text-white flex items-center gap-1 mb-4 transition">
-                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
-                        Back to calendar
-                    </button>
-                    <h3 class="text-lg font-bold text-white mb-1">Confirm Your Selected Slot</h3>
-                    <p class="text-xs text-white/70 mb-5" id="form-target-slot-details"></p>
-
-                    <form id="intake-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-3.5">
-                        <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
-                        <input type="hidden" name="subject" value="New Amiri Solar Cleaning Booking Request">
-                        <input type="hidden" name="selected_slot" id="hidden-slot-input">
-
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-white/60 mb-1">Your Full Name</label>
-                            <input type="text" name="name" required placeholder="John Doe" class="w-full px-4 py-2 bg-black/20 border border-white/10 rounded-xl text-sm text-white placeholder-white/30 focus:outline-none focus:border-brand-skyBlue transition">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-white/60 mb-1">Phone Number</label>
-                            <input type="tel" name="phone" required placeholder="(408) 555-0199" class="w-full px-4 py-2 bg-black/20 border border-white/10 rounded-xl text-sm text-white placeholder-white/30 focus:outline-none focus:border-brand-skyBlue transition">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-white/60 mb-1">Service Address</label>
-                            <input type="text" name="address" required placeholder="578 More Ave, Los Gatos, CA" class="w-full px-4 py-2 bg-black/20 border border-white/10 rounded-xl text-sm text-white placeholder-white/30 focus:outline-none focus:border-brand-skyBlue transition">
+            <div class="sm:col-span-7 p-6 md:p-8 flex flex-col justify-between min-h-[440px]">
+                
+                <div id="calendar-view" class="space-y-6 flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-base font-semibold text-white tracking-wide" id="month-year-label">May 2026</h3>
+                            <div class="flex gap-1.5">
+                                <button id="prev-month" class="p-1.5 rounded-lg bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:bg-white/10 transition">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                                </button>
+                                <button id="next-month" class="p-1.5 rounded-lg bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:bg-white/10 transition">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                </button>
+                            </div>
                         </div>
 
-                        <button type="submit" class="w-full mt-2 py-3 bg-brand-leafGreen hover:bg-lime-400 text-white font-bold rounded-xl shadow-lg text-sm tracking-wide transition-colors duration-150">
-                            Hold My Free Slot Now
+                        <div class="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-slate-400 mb-2.5 tracking-wider">
+                            <div>SUN</div><div>MON</div><div>TUE</div><div>WED</div><div>THU</div><div>FRI</div><div>SAT</div>
+                        </div>
+
+                        <div class="grid grid-cols-7 gap-1 text-center text-sm font-medium" id="calendar-days"></div>
+                    </div>
+
+                    <div class="mt-4 pt-4 border-t border-white/10">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2.5" id="slots-header">Available Slots</p>
+                        <div class="grid grid-cols-2 gap-2" id="slots-container"></div>
+                    </div>
+                </div>
+
+                <div id="form-view" class="hidden h-full flex flex-col justify-between">
+                    <div>
+                        <button id="back-to-calendar" class="text-xs font-medium text-brand-skyBlue hover:text-white flex items-center gap-1 mb-4 transition">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+                            Back to calendar
                         </button>
-                    </form>
-                </div>
-            </div>
+                        <h3 class="text-lg font-bold text-white mb-1">Confirm Your Selected Slot</h3>
+                        <p class="text-xs text-slate-400 mb-5" id="form-target-slot-details"></p>
 
-            <div id="success-view" class="hidden h-full flex flex-col items-center justify-center text-center p-4">
-                <div class="w-14 h-14 bg-brand-leafGreen/20 border border-brand-leafGreen rounded-full flex items-center justify-center text-brand-leafGreen mb-3 shadow-xl">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        <form id="intake-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-3.5">
+                            <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
+                            <input type="hidden" name="subject" value="New Amiri Solar Cleaning Booking Request">
+                            <input type="hidden" name="selected_slot" id="hidden-slot-input">
+
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Your Full Name</label>
+                                <input type="text" name="name" required placeholder="John Doe" class="w-full px-4 py-2 bg-black/30 border border-white/10 rounded-xl text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-skyBlue transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Phone Number</label>
+                                <input type="tel" name="phone" required placeholder="(408) 555-0199" class="w-full px-4 py-2 bg-black/30 border border-white/10 rounded-xl text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-skyBlue transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Service Address</label>
+                                <input type="text" name="address" required placeholder="578 More Ave, Los Gatos, CA" class="w-full px-4 py-2 bg-black/30 border border-white/10 rounded-xl text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-skyBlue transition">
+                            </div>
+
+                            <button type="submit" class="w-full mt-2 py-3 bg-brand-leafGreen hover:bg-lime-400 text-white font-bold rounded-xl shadow-lg text-sm tracking-wide transition-colors">
+                                Hold My Free Slot Now
+                            </button>
+                        </form>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2">Slot Successfully Reserved!</h3>
-                <p class="text-sm text-white/80 max-w-sm mb-5 font-light" id="success-message-body"></p>
-                <button id="reset-booking-engine" class="px-5 py-2 bg-white/5 border border-white/10 rounded-xl text-xs font-medium text-slate-300 hover:text-white hover:bg-white/10 transition">
-                    Book Another Session
+
+                <div id="success-view" class="hidden h-full flex flex-col items-center justify-center text-center p-4">
+                    <div class="w-14 h-14 bg-brand-leafGreen/20 border border-brand-leafGreen rounded-full flex items-center justify-center text-brand-leafGreen mb-3 shadow-xl">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Slot Successfully Reserved!</h3>
+                    <p class="text-sm text-slate-300 max-w-sm mb-5 font-light" id="success-message-body"></p>
+                    <button id="reset-booking-engine" class="px-5 py-2 bg-white/5 border border-white/10 rounded-xl text-xs font-medium text-slate-300 hover:text-white hover:bg-white/10 transition">
+                        Book Another Session
                     </button>
-            </div>
+                </div>
 
+            </div>
         </div>
     </main>
 
@@ -167,7 +196,7 @@
                     <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
                 </div>
                 <div class="text-left">
-                    <p class="text-[10px] uppercase tracking-wider text-white/80 font-semibold leading-none">Need immediate dispatch?</p>
+                    <p class="text-[10px] uppercase tracking-wider text-white/70 font-semibold leading-none">Need immediate dispatch?</p>
                     <p class="text-sm tracking-wide mt-0.5">CALL DIRECT: 408-457-4067</p>
                 </div>
             </div>
@@ -212,7 +241,7 @@
 
             for (let i = firstDayIndex; i > 0; i--) {
                 const dayDiv = document.createElement('div');
-                dayDiv.className = 'p-2 text-white/20 select-none';
+                dayDiv.className = 'p-2 text-slate-600/30 select-none';
                 dayDiv.innerText = prevLastDay - i + 1;
                 calendarDaysContainer.appendChild(dayDiv);
             }
@@ -223,9 +252,9 @@
                 const isSelected = selectedDate.getDate() === day && selectedDate.getMonth() === month && selectedDate.getFullYear() === year;
 
                 if (isSelected) {
-                    dayDiv.className = 'p-2 bg-brand-leafGreen text-white font-bold rounded-lg cursor-pointer shadow-md';
+                    dayDiv.className = 'p-2 bg-brand-leafGreen/20 border border-brand-leafGreen text-white font-bold rounded-lg cursor-pointer';
                 } else {
-                    dayDiv.className = 'p-2 text-white/90 cursor-pointer hover:bg-white/10 rounded-lg transition';
+                    dayDiv.className = 'p-2 text-slate-300 cursor-pointer hover:bg-white/5 rounded-lg transition';
                 }
 
                 dayDiv.addEventListener('click', () => {
@@ -240,7 +269,7 @@
             const nextPadding = totalCells % 7 === 0 ? 0 : 7 - (totalCells % 7);
             for (let i = 1; i <= nextPadding; i++) {
                 const dayDiv = document.createElement('div');
-                dayDiv.className = 'p-2 text-white/20 select-none';
+                dayDiv.className = 'p-2 text-slate-600/30 select-none';
                 dayDiv.innerText = i;
                 calendarDaysContainer.appendChild(dayDiv);
             }
@@ -259,8 +288,8 @@
 
             dynamicSlots.forEach(time => {
                 const btn = document.createElement('button');
-                // CLEAN BRAND GREEN BUTTON INTERFACE Calculation
-                btn.className = 'py-3 px-4 bg-brand-leafGreen text-white font-bold rounded-xl text-sm tracking-wide text-center hover:bg-lime-500 active:scale-[0.98] transition-all duration-150 shadow-md';
+                // PREMIUM GREEN ACTION SLOT BUTTONS: Cleaner typography and padding balance
+                btn.className = 'py-2.5 px-4 bg-brand-leafGreen text-white font-bold rounded-xl text-sm tracking-wide text-center hover:bg-lime-500 active:scale-[0.98] transition-all duration-150 shadow-md border border-white/10';
                 btn.innerHTML = `<span>${time}</span>`;
                 
                 btn.addEventListener('click', () => {
@@ -306,7 +335,7 @@
             formView.classList.add('hidden');
             successView.classList.remove('hidden');
             const clientPhone = document.querySelector('input[name="phone"]').value || "your number";
-            successMessageBody.innerHTML = `Your slot for <span class="text-brand-skyBlue font-semibold">${selectedTimeSlot}</span> is on hold. A scheduling representative will call you shortly at <span class="text-brand-leafGreen font-bold">${clientPhone}</span> to finalize your coordinates.`;
+            successMessageBody.innerHTML = `Your slot for <span class="text-brand-skyBlue font-medium">${selectedTimeSlot}</span> is on hold. A scheduling representative will call you shortly at <span class="text-brand-leafGreen font-medium">${clientPhone}</span> to finalize your setup coordinates.`;
         }
 
         document.getElementById('reset-booking-engine').addEventListener('click', () => {
