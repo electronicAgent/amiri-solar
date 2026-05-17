@@ -41,7 +41,7 @@
 
     <header class="w-full max-w-4xl mx-auto px-4 pt-8 pb-4 text-center flex flex-col items-center gap-3">
         <div class="mb-2 transition-transform duration-300 hover:scale-105">
-            <img src="logo.png" alt="Amiri Solar Cleaning Logo" onerror="this.style.display='none';" class="max-h-24 w-auto object-contain drop-shadow-lg">
+            <img src="logo%20ASC.png" alt="Amiri Solar Cleaning Logo" onerror="this.style.display='none';" class="max-h-28 w-auto object-contain drop-shadow-lg">
         </div>
         
         <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-white drop-shadow-md">
@@ -325,7 +325,6 @@
             const form = e.target;
             const formData = new FormData(form);
             
-            // Asynchronously shoot data out over API gateway pipeline to the owner's inbox
             fetch(form.action, {
                 method: form.method,
                 body: formData,
