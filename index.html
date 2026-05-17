@@ -17,10 +17,10 @@
                     },
                     colors: {
                         brand: {
-                            bgDeep: '#002244',      /* Deep rich blue from card background */
-                            bgGradient: '#004B93',  /* Vibrant royal blue accent */
-                            leafGreen: '#76BC21',   /* Exact branding green from "Solar" */
-                            skyBlue: '#00A4E4'       /* Clean icon/sky blue border */
+                            bgDeep: '#002244',      
+                            bgGradient: '#004B93',  
+                            leafGreen: '#76BC21',   
+                            skyBlue: '#00A4E4'       
                         }
                     }
                 }
@@ -32,13 +32,12 @@
             background: linear-gradient(135deg, #00152B 0%, #002244 50%, #003366 100%);
             font-family: 'Inter', sans-serif;
         }
-        /* Custom sleek scrollbar styling */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #00152B; }
         ::-webkit-scrollbar-thumb { background: #004B93; border-radius: 10px; }
     </style>
 </head>
-<body class="text-slate-100 antialiased min-h-screen flex flex-col items-center justify-between pb-24 md:pb-8">
+<body class="text-slate-100 antialiased min-h-screen flex flex-col items-center justify-between pb-24 sm:pb-8">
 
     <header class="w-full max-w-4xl mx-auto px-4 pt-8 pb-4 text-center">
         <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-white">
@@ -62,16 +61,16 @@
     </header>
 
     <main class="w-full max-w-4xl mx-auto px-4 flex-grow flex items-center justify-center my-4">
-        <div class="bg-gradient-to-b from-[#002B54] to-[#001F3F] border border-white/10 rounded-2xl shadow-2xl w-full grid grid-cols-1 md:grid-cols-12 overflow-hidden backdrop-blur-md">
+        <div class="bg-gradient-to-b from-[#002B54] to-[#001F3F] border border-white/10 rounded-2xl shadow-2xl w-full grid grid-cols-1 sm:grid-cols-12 overflow-hidden backdrop-blur-md">
             
-            <div class="md:col-span-5 bg-black/20 p-6 md:p-8 border-b md:border-b-0 md:border-r border-white/10 flex flex-col justify-between">
+            <div class="sm:col-span-5 bg-black/20 p-6 md:p-8 border-b sm:border-b-0 sm:border-r border-white/10 flex flex-col justify-between">
                 <div>
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 rounded-full bg-brand-bgGradient/50 border border-brand-skyBlue/40 flex items-center justify-center overflow-hidden text-white shadow-inner">
-                            <svg class="w-5 h-5 text-brand-skyBlue" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        <div class="w-10 h-10 rounded-full bg-brand-bgGradient/50 border border-brand-skyBlue/40 flex items-center justify-center overflow-hidden shadow-inner">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&h=120&q=80" alt="Sarah Jenkins" class="w-full h-full object-cover">
                         </div>
                         <div>
-                            <h3 class="text-sm font-semibold text-white tracking-wide">Tarik Kadić</h3>
+                            <h3 class="text-sm font-semibold text-white tracking-wide">Sarah Jenkins</h3>
                             <p class="text-xs text-brand-skyBlue font-medium">Scheduling Coordinator</p>
                         </div>
                     </div>
@@ -111,7 +110,7 @@
                 </div>
             </div>
 
-            <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-between">
+            <div class="sm:col-span-7 p-6 md:p-8 flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-6">
                         <h3 class="text-base font-semibold text-white tracking-wide" id="month-year-label">May 2026</h3>
@@ -170,8 +169,8 @@
         </div>
     </main>
 
-    <footer class="fixed bottom-0 left-0 right-0 md:absolute md:bottom-6 w-full max-w-xl mx-auto px-4 z-50">
-        <a href="tel:4084574067" class="flex items-center justify-between bg-brand-leafGreen text-[#001F3F] px-6 py-4 rounded-xl md:rounded-2xl shadow-xl hover:bg-lime-400 hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 font-bold group">
+    <footer class="fixed bottom-0 left-0 right-0 sm:absolute sm:bottom-6 w-full max-w-xl mx-auto px-4 z-50">
+        <a href="tel:4084574067" class="flex items-center justify-between bg-brand-leafGreen text-[#001F3F] px-6 py-4 rounded-xl sm:rounded-2xl shadow-xl hover:bg-lime-400 hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 font-bold group">
             <div class="flex items-center gap-3">
                 <div class="p-2 bg-black/10 rounded-lg group-hover:bg-black/20 transition">
                     <svg class="w-5 h-5 text-[#001F3F]" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
@@ -186,7 +185,7 @@
     </footer>
 
     <script>
-        console.log("Amiri Solar UI Engine Initialized with Premium Brand Palette.");
+        console.log("Amiri Solar Dynamic UI Engine Updated.");
     </script>
 </body>
 </html>
