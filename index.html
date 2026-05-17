@@ -79,6 +79,7 @@
             padding: 24px;
             border: 1px solid rgba(255, 255, 255, 0.08);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
         }
 
         .promo-badge {
@@ -95,49 +96,15 @@
         }
 
         .promo-card h2 {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 700;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .promo-card p {
             color: var(--text-muted);
-            font-size: 14px;
+            font-size: 15px;
             line-height: 1.5;
-            margin-bottom: 20px;
-        }
-
-        /* Native Keyboard Autofill Optimization Fields */
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .input-wrapper {
-            position: relative;
-        }
-
-        input {
-            width: 100%;
-            padding: 16px 16px;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            background: rgba(11, 19, 43, 0.6);
-            color: var(--pure-white);
-            font-size: 16px; /* Prevents iOS auto-zoom on focus */
-            transition: all 0.2s ease;
-        }
-
-        input::placeholder {
-            color: rgba(255, 255, 255, 0.4);
-        }
-
-        input:focus {
-            border-color: var(--eco-green);
-            background: rgba(11, 19, 43, 0.9);
-            outline: none;
-            box-shadow: 0 0 10px rgba(57, 255, 20, 0.15);
         }
 
         /* Seamless TidyCal Container Layer */
@@ -206,28 +173,16 @@
 
     <div class="solar-grid-accent"></div>
 
-    <!-- Intake card optimized to trigger system-level personal card autofill -->
+    <!-- Trimmed promotional pitch card (redundant inputs completely removed) -->
     <div class="promo-card">
         <span class="promo-badge">Limited Time Promotion</span>
         <h2>Secure Your First-Time Discount</h2>
-        <p>Tap any field below to use your phone's secure autofill. No payment required to reserve your slot.</p>
-        
-        <form class="form-group" onsubmit="return false;">
-            <div class="input-wrapper">
-                <input type="text" name="customer_name" autocomplete="name" placeholder="Full Name" required>
-            </div>
-            <div class="input-wrapper">
-                <input type="tel" name="customer_phone" autocomplete="tel" placeholder="Cell Phone Number" required>
-            </div>
-            <div class="input-wrapper); margin-bottom: 4px;">
-                <input type="text" name="customer_address" autocomplete="street-address" placeholder="Service Street Address" required>
-            </div>
-        </form>
+        <p>Pick a convenient service time window below, provide your details, and we will call you to confirm your booking. No upfront payment required!</p>
     </div>
 
     <!-- Live TidyCal Interface Area -->
     <div class="calendar-section">
-        <h3>1. Select Date & Time Slot Below</h3>
+        <h3>Select An Available Time Slot Below</h3>
         
         <!-- Native Responsive TidyCal Widget Container -->
         <div class="tidycal-embed" data-path="electronicagent/free-first-time-slot-hold-no-payment"></div>
