@@ -86,7 +86,7 @@
                         </div>
                         <div class="flex items-center gap-3">
                             <svg class="w-4 h-4 text-brand-leafGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                            <span>10 open seats remaining</span>
+                            <span id="left-spots-indicator">10 open slots today</span>
                         </div>
                     </div>
 
@@ -99,7 +99,7 @@
                     <div class="flex items-center justify-between text-xs">
                         <span class="text-slate-400">Mutual availability system</span>
                         <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" value="" class="sr-only peer" checked disabled>
+                            <input type="checkbox" id="availability-toggle" class="sr-only peer" checked>
                             <div class="w-7 h-4 bg-slate-800 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-brand-leafGreen"></div>
                         </label>
                     </div>
@@ -115,10 +115,10 @@
                     <div class="flex items-center justify-between mb-6">
                         <h3 class="text-base font-semibold text-white tracking-wide" id="month-year-label">May 2026</h3>
                         <div class="flex gap-1.5">
-                            <button class="p-1.5 rounded-lg bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:bg-white/10 transition">
+                            <button id="prev-month" class="p-1.5 rounded-lg bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:bg-white/10 transition">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                             </button>
-                            <button class="p-1.5 rounded-lg bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:bg-white/10 transition">
+                            <button id="next-month" class="p-1.5 rounded-lg bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:bg-white/10 transition">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                             </button>
                         </div>
@@ -128,42 +128,12 @@
                         <div>SUN</div><div>MON</div><div>TUE</div><div>WED</div><div>THU</div><div>FRI</div><div>SAT</div>
                     </div>
 
-                    <div class="grid grid-cols-7 gap-1 text-center text-sm font-medium" id="calendar-days">
-                        <div class="p-2 text-slate-600/60">26</div><div class="p-2 text-slate-600/60">27</div><div class="p-2 text-slate-600/60">28</div><div class="p-2 text-slate-600/60">29</div><div class="p-2 text-slate-600/60">30</div>
-                        <div class="p-2 text-slate-300">1</div><div class="p-2 text-slate-300">2</div>
-                        <div class="p-2 text-slate-300">3</div><div class="p-2 text-slate-300">4</div><div class="p-2 text-slate-300">5</div><div class="p-2 text-slate-300">6</div><div class="p-2 text-slate-300">7</div><div class="p-2 text-slate-300">8</div><div class="p-2 text-slate-300">9</div>
-                        <div class="p-2 text-slate-300">10</div><div class="p-2 text-slate-300">11</div><div class="p-2 text-slate-300">12</div><div class="p-2 text-slate-300">13</div><div class="p-2 text-slate-300">14</div><div class="p-2 text-slate-300">15</div><div class="p-2 text-slate-300">16</div>
-                        
-                        <div class="p-2 text-slate-400 cursor-pointer hover:bg-white/5 rounded-lg transition">17</div>
-                        <div class="p-2 bg-brand-leafGreen/20 border border-brand-leafGreen text-white font-bold rounded-lg cursor-pointer" id="selected-day-node">18</div>
-                        <div class="p-2 bg-white/5 text-slate-200 cursor-pointer hover:bg-white/10 rounded-lg transition">19</div>
-                        <div class="p-2 bg-white/5 text-slate-200 cursor-pointer hover:bg-white/10 rounded-lg transition">20</div>
-                        
-                        <div class="p-2 text-slate-400 cursor-pointer hover:bg-white/5 rounded-lg transition">21</div>
-                        <div class="p-2 text-slate-400 cursor-pointer hover:bg-white/5 rounded-lg transition">22</div>
-                        <div class="p-2 text-slate-400 cursor-pointer hover:bg-white/5 rounded-lg transition">23</div>
-                        <div class="p-2 text-slate-400 cursor-pointer hover:bg-white/5 rounded-lg transition">24</div>
-                        <div class="p-2 bg-white/5 text-slate-200 cursor-pointer hover:bg-white/10 rounded-lg transition">25</div>
-                        <div class="p-2 bg-white/5 text-slate-200 cursor-pointer hover:bg-white/10 rounded-lg transition">26</div>
-                        <div class="p-2 text-slate-400 cursor-pointer hover:bg-white/5 rounded-lg transition">27</div>
-                        <div class="p-2 text-slate-400 cursor-pointer hover:bg-white/5 rounded-lg transition">28</div>
-                        <div class="p-2 text-slate-400 cursor-pointer hover:bg-white/5 rounded-lg transition">29</div>
-                        <div class="p-2 text-slate-400 cursor-pointer hover:bg-white/5 rounded-lg transition">30</div>
-                    </div>
+                    <div class="grid grid-cols-7 gap-1 text-center text-sm font-medium" id="calendar-days"></div>
                 </div>
 
                 <div class="mt-6 pt-5 border-t border-white/10">
                     <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3" id="slots-header">Available Slots — Monday 18th</p>
-                    <div class="grid grid-cols-2 gap-2" id="slots-container">
-                        <button class="py-3 px-4 bg-white/5 border border-white/10 rounded-xl text-sm font-medium hover:bg-brand-bgGradient/30 hover:border-brand-skyBlue text-white transition text-left flex justify-between items-center group">
-                            <span>08:00 AM</span>
-                            <span class="text-[11px] text-slate-400 group-hover:text-white transition">10 left</span>
-                        </button>
-                        <button class="py-3 px-4 bg-white/5 border border-white/10 rounded-xl text-sm font-medium hover:bg-brand-bgGradient/30 hover:border-brand-skyBlue text-white transition text-left flex justify-between items-center group">
-                            <span>08:15 AM</span>
-                            <span class="text-[11px] text-slate-400 group-hover:text-white transition">10 left</span>
-                        </button>
-                    </div>
+                    <div class="grid grid-cols-2 gap-2" id="slots-container"></div>
                 </div>
             </div>
         </div>
@@ -185,7 +155,128 @@
     </footer>
 
     <script>
-        console.log("Amiri Solar Dynamic UI Engine Updated.");
+        // Calendar State Tracking Core
+        let displayDate = new Date(2026, 4, 18); // Default tracking locked onto May 2026
+        let selectedDate = new Date(2026, 4, 18); // Default selected active day anchor
+
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        const monthYearLabel = document.getElementById('month-year-label');
+        const calendarDaysContainer = document.getElementById('calendar-days');
+        const slotsHeader = document.getElementById('slots-header');
+        const slotsContainer = document.getElementById('slots-container');
+        const spotsIndicator = document.getElementById('left-spots-indicator');
+
+        function initCalendar() {
+            renderCalendar();
+            renderSlots();
+        }
+
+        function renderCalendar() {
+            calendarDaysContainer.innerHTML = '';
+            
+            const year = displayDate.getFullYear();
+            const month = displayDate.getMonth();
+            
+            monthYearLabel.innerText = `${months[month]} ${year}`;
+
+            const firstDayIndex = new Date(year, month, 1).getDay();
+            const lastDay = new Date(year, month + 1, 0).getDate();
+            const prevLastDay = new Date(year, month, 0).getDate();
+
+            // Render matching tail block padding from previous month
+            for (let i = firstDayIndex; i > 0; i--) {
+                const dayDiv = document.createElement('div');
+                dayDiv.className = 'p-2 text-slate-600/40 select-none';
+                dayDiv.innerText = prevLastDay - i + 1;
+                calendarDaysContainer.appendChild(dayDiv);
+            }
+
+            // Render main target calendar row calculations
+            for (let day = 1; day <= lastDay; day++) {
+                const dayDiv = document.createElement('div');
+                dayDiv.innerText = day;
+                
+                const isSelected = selectedDate.getDate() === day && 
+                                   selectedDate.getMonth() === month && 
+                                   selectedDate.getFullYear() === year;
+
+                if (isSelected) {
+                    dayDiv.className = 'p-2 bg-brand-leafGreen/20 border border-brand-leafGreen text-white font-bold rounded-lg cursor-pointer';
+                } else {
+                    dayDiv.className = 'p-2 text-slate-300 cursor-pointer hover:bg-white/5 rounded-lg transition';
+                }
+
+                dayDiv.addEventListener('click', () => {
+                    selectedDate = new Date(year, month, day);
+                    renderCalendar();
+                    renderSlots();
+                });
+
+                calendarDaysContainer.appendChild(dayDiv);
+            }
+
+            // Calculate forward trailing row structures
+            const totalCells = firstDayIndex + lastDay;
+            const nextPadding = totalCells % 7 === 0 ? 0 : 7 - (totalCells % 7);
+            for (let i = 1; i <= nextPadding; i++) {
+                const dayDiv = document.createElement('div');
+                dayDiv.className = 'p-2 text-slate-600/60 select-none';
+                dayDiv.innerText = i;
+                calendarDaysContainer.appendChild(dayDiv);
+            }
+        }
+
+        function renderSlots() {
+            const dayOfWeekName = weekdays[selectedDate.getDay()];
+            const dayNum = selectedDate.getDate();
+            
+            slotsHeader.innerText = `Available Slots — ${dayOfWeekName} ${dayNum}th`;
+
+            // Dynamic mock data generator base to simulate processing state
+            let dynamicSlots = [];
+            if (selectedDate.getDay() === 0 || selectedDate.getDay() === 6) {
+                // Alternate weekend operational display windows
+                dynamicSlots = ["09:00 AM", "10:30 AM", "01:00 PM"];
+            } else {
+                // Regular field processing windows
+                dynamicSlots = ["08:00 AM", "08:15 AM", "10:00 AM", "11:15 AM", "01:40 PM", "03:00 PM"];
+            }
+
+            spotsIndicator.innerText = `${dynamicSlots.length + 4} open slots today`;
+            slotsContainer.innerHTML = '';
+
+            dynamicSlots.forEach(time => {
+                const btn = document.createElement('button');
+                btn.className = 'py-3 px-4 bg-white/5 border border-white/10 rounded-xl text-sm font-medium hover:bg-brand-bgGradient/30 hover:border-brand-skyBlue text-white transition text-left flex justify-between items-center group';
+                btn.innerHTML = `
+                    <span>${time}</span>
+                    <span class="text-[11px] text-slate-400 group-hover:text-white transition">10 left</span>
+                `;
+                
+                // Show dynamic conversion check states to prove complete structural operation
+                btn.addEventListener('click', () => {
+                    alert(`Routing Simulation: Holding the ${time} slot on ${months[selectedDate.getMonth()]} ${selectedDate.getDate()} details confirmed.`);
+                });
+                
+                slotsContainer.appendChild(btn);
+            });
+        }
+
+        // Click Logic Handlers for Month Steppers
+        document.getElementById('prev-month').addEventListener('click', () => {
+            displayDate.setMonth(displayDate.getMonth() - 1);
+            renderCalendar();
+        });
+
+        document.getElementById('next-month').addEventListener('click', () => {
+            displayDate.setMonth(displayDate.getMonth() + 1);
+            renderCalendar();
+        });
+
+        // Initialize target execution on setup load
+        initCalendar();
     </script>
 </body>
 </html>
