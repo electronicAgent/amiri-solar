@@ -6,14 +6,15 @@
     <title>Amiri Solar Cleaning - Book a Slot</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        // Applying unique Sora font to the whole interface
+                        sans: ['Sora', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -29,13 +30,8 @@
     </script>
     <style>
         body {
-            /* Smooth background gradient mixed with a custom CSS-driven premium technical solar panel cell grid pattern */
-            background: 
-                linear-gradient(180deg, rgba(0, 43, 84, 0.9) 0%, rgba(0, 26, 51, 0.95) 100%),
-                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
-                linear-gradient(0deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-            background-size: 100% 100%, 40px 40px, 40px 40px;
-            font-family: 'Inter', sans-serif;
+            background: linear-gradient(180deg, #002B54 0%, #001A33 100%);
+            font-family: 'Sora', sans-serif;
         }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #001A33; }
@@ -62,16 +58,16 @@
             </div>
             
             <div class="flex flex-wrap justify-center md:justify-end gap-1.5 text-[10px] font-bold uppercase tracking-wider">
-                <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-slate-300 flex items-center gap-1.5">
+                <span class="px-2.5 py-1 bg-brand-skyBlue/10 border border-brand-skyBlue/30 rounded-full text-white flex items-center gap-1.5 shadow-md">
                     <span class="w-1 h-1 rounded-full bg-brand-skyBlue animate-pulse"></span> Spotless
                 </span>
-                <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-slate-300 flex items-center gap-1.5">
+                <span class="px-2.5 py-1 bg-brand-skyBlue/10 border border-brand-skyBlue/30 rounded-full text-white flex items-center gap-1.5 shadow-md">
                     <span class="w-1 h-1 rounded-full bg-brand-skyBlue"></span> Protection
                 </span>
-                <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-slate-300 flex items-center gap-1.5">
-                    <span class="w-1 h-1 rounded-full bg-brand-leafGreen"></span> Eco-Friendly
+                <span class="px-2.5 py-1 bg-brand-leafGreen/10 border border-brand-leafGreen/30 rounded-full text-white flex items-center gap-1.5 shadow-md">
+                    <span class="w-1 h-1 rounded-full bg-brand-leafGreen animate-pulse"></span> Eco-Friendly
                 </span>
-                <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-slate-300 flex items-center gap-1.5">
+                <span class="px-2.5 py-1 bg-brand-leafGreen/10 border border-brand-leafGreen/30 rounded-full text-white flex items-center gap-1.5 shadow-md">
                     <span class="w-1 h-1 rounded-full bg-brand-leafGreen"></span> Max Output
                 </span>
             </div>
@@ -100,7 +96,7 @@
                         <div class="h-[2px] w-24 bg-gradient-to-r from-brand-skyBlue to-brand-leafGreen rounded-full mt-2 mx-auto sm:mx-0"></div>
                     </div>
 
-                    <div class="space-y-3 my-5 text-sm text-slate-200 flex flex-col items-center sm:items-start w-full">
+                    <div class="space-y-3 my-4 text-sm text-slate-200 flex flex-col items-center sm:items-start w-full">
                         <div class="flex items-center gap-3 px-3 py-1.5 bg-white/5 border border-white/5 rounded-xl">
                             <svg class="w-4 h-4 text-brand-skyBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                             <span class="font-medium text-slate-300">45 Minute Session</span>
@@ -108,7 +104,7 @@
                     </div>
 
                     <p class="text-xs text-slate-300 leading-relaxed font-light max-w-sm sm:max-w-none">
-                        Choose a convenient window for your inspection and cleaning. A representative will contact you directly to confirm service logistics and location.
+                        Choose a convenient window for your inspection and cleaning. A representative will contact you directly to confirm logistics and location.
                     </p>
                 </div>
 
@@ -221,6 +217,7 @@
     </footer>
 
     <script>
+        // Use unique May 2026 scheduling window logic anchor
         let displayDate = new Date(2026, 4, 18); 
         let selectedDate = new Date(2026, 4, 18); 
         let selectedTimeSlot = "";
@@ -268,9 +265,10 @@
                 const isSelected = selectedDate.getDate() === day && selectedDate.getMonth() === month && selectedDate.getFullYear() === year;
 
                 if (isSelected) {
-                    dayDiv.className = 'p-2 bg-brand-leafGreen/20 border border-brand-leafGreen text-white font-bold rounded-lg cursor-pointer';
+                    // Update: Intricate Glowing Tech-Ring design for active day
+                    dayDiv.className = 'p-2 text-brand-leafGreen font-bold rounded-lg cursor-pointer ring-2 ring-brand-leafGreen ring-offset-2 ring-offset-[#001A33] shadow-md transition';
                 } else {
-                    dayDiv.className = 'p-2 text-slate-300 cursor-pointer hover:bg-white/5 rounded-lg transition';
+                    dayDiv.className = 'p-2 text-slate-300 cursor-pointer hover:bg-white/5 hover:text-white rounded-lg transition';
                 }
 
                 dayDiv.addEventListener('click', () => {
@@ -304,7 +302,8 @@
 
             dynamicSlots.forEach(time => {
                 const btn = document.createElement('button');
-                btn.className = 'py-2.5 px-4 bg-brand-leafGreen text-[#001A33] font-bold rounded-xl text-sm tracking-wide text-center hover:bg-lime-400 active:scale-[0.98] transition-all duration-150 shadow-md border border-white/5';
+                // CLEAN PREMIUM ACTION BUTTONS: Pill shape with bold green action color and clean typography
+                btn.className = 'py-3 px-4 bg-brand-leafGreen text-[#001A33] font-bold rounded-full text-sm tracking-wide text-center hover:bg-lime-400 active:scale-[0.98] transition-all duration-150 shadow-md border border-white/5';
                 btn.innerHTML = `<span>${time}</span>`;
                 
                 btn.addEventListener('click', () => {
@@ -329,6 +328,7 @@
             calendarView.classList.remove('hidden');
         });
 
+        // Background logic hook for intake API endpoint routing
         document.getElementById('intake-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const form = e.target;
@@ -350,7 +350,7 @@
             formView.classList.add('hidden');
             successView.classList.remove('hidden');
             const clientPhone = document.querySelector('input[name="phone"]').value || "your number";
-            successMessageBody.innerHTML = `Your slot for <span class="text-brand-skyBlue font-medium">${selectedTimeSlot}</span> is on hold. A scheduling representative will call you shortly at <span class="text-brand-leafGreen font-medium">${clientPhone}</span> to finalize your coordinates.`;
+            successMessageBody.innerHTML = `Your slot for <span class="text-brand-skyBlue font-medium">${selectedTimeSlot}</span> is on hold. Sarah Jenkins will call you shortly at <span class="text-brand-leafGreen font-medium">${clientPhone}</span> to finalize your coordinates.`;
         }
 
         document.getElementById('reset-booking-engine').addEventListener('click', () => {
