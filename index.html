@@ -71,38 +71,32 @@
         <div class="w-full grid grid-cols-1 sm:grid-cols-12 overflow-hidden">
             
             <div class="sm:col-span-5 bg-black/15 p-6 md:p-8 border-b sm:border-b-0 sm:border-r border-white/10 flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden shadow-inner">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&h=120&q=80" alt="Sarah Jenkins" class="w-full h-full object-cover">
-                        </div>
+                <div class="text-center sm:text-left">
+                    <div class="flex flex-col items-center sm:items-start gap-2 mb-6">
+                        <img src="logo%20ASC.png" alt="Amiri Solar Cleaning" class="h-28 w-28 object-contain drop-shadow-xl mb-2">
                         <div>
-                            <h3 class="text-sm font-semibold text-white tracking-wide">Sarah Jenkins</h3>
-                            <p class="text-xs text-brand-skyBlue font-medium">Scheduling Coordinator</p>
+                            <h3 class="text-lg font-bold text-white tracking-wide">Sarah Jenkins</h3>
+                            <p class="text-xs text-brand-skyBlue font-semibold uppercase tracking-wider mt-0.5">Scheduling Coordinator</p>
                         </div>
                     </div>
 
-                    <h2 class="text-xl font-bold text-white mb-3 leading-tight">
-                        Free first-time slot hold <span class="text-slate-400 font-normal text-sm block mt-0.5">(no upfront payment)</span>
+                    <h2 class="text-xl font-bold text-white mb-4 tracking-tight leading-tight border-t border-white/5 pt-4">
+                        Inspection and cleaning slot hold
                     </h2>
 
-                    <div class="space-y-2.5 my-5 text-sm text-slate-200">
+                    <div class="space-y-3 my-5 text-sm text-slate-200 flex flex-col items-center sm:items-start">
                         <div class="flex items-center gap-3">
                             <svg class="w-4 h-4 text-brand-skyBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span>30 Minute Session</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <svg class="w-4 h-4 text-brand-leafGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                            <span id="left-spots-indicator">10 open slots today</span>
+                            <span class="font-medium">45 Minute Session</span>
                         </div>
                     </div>
 
                     <p class="text-xs text-slate-300 leading-relaxed font-light">
-                        Reserve a convenient time slot for your solar panel cleaning. We will call you directly to confirm target address and vehicle logistics. No payment is required to hold this slot—charges are initialized only following complete physical execution.
+                        Choose a convenient window for your inspection and cleaning. A representative will contact you directly to confirm service logistics and location.
                     </p>
                 </div>
 
-                <div class="mt-6 pt-5 border-t border-white/5 space-y-3.5">
+                <div class="mt-8 pt-5 border-t border-white/5 space-y-3.5">
                     <div class="flex items-center justify-between text-xs">
                         <span class="text-slate-400">Mutual availability system</span>
                         <label class="relative inline-flex items-center cursor-pointer">
@@ -226,7 +220,6 @@
         const calendarDaysContainer = document.getElementById('calendar-days');
         const slotsHeader = document.getElementById('slots-header');
         const slotsContainer = document.getElementById('slots-container');
-        const spotsIndicator = document.getElementById('left-spots-indicator');
         const targetSlotDetailsText = document.getElementById('form-target-slot-details');
         const hiddenSlotInput = document.getElementById('hidden-slot-input');
         const successMessageBody = document.getElementById('success-message-body');
@@ -291,13 +284,12 @@
                 ? ["09:00 AM", "10:30 AM", "01:00 PM"] 
                 : ["08:00 AM", "08:15 AM", "10:00 AM", "11:15 AM", "01:40 PM", "03:00 PM"];
 
-            spotsIndicator.innerText = `${dynamicSlots.length + 4} open slots today`;
             slotsContainer.innerHTML = '';
 
             dynamicSlots.forEach(time => {
                 const btn = document.createElement('button');
                 btn.className = 'py-2.5 px-4 bg-white/5 border border-white/10 rounded-xl text-sm font-medium hover:bg-brand-bgGradient/30 hover:border-brand-skyBlue text-white transition text-left flex justify-between items-center group';
-                btn.innerHTML = `<span>${time}</span><span class="text-[11px] text-slate-400 group-hover:text-white transition">10 left</span>`;
+                btn.innerHTML = `<span>${time}</span>`;
                 
                 btn.addEventListener('click', () => {
                     selectedTimeSlot = time;
@@ -342,7 +334,7 @@
             formView.classList.add('hidden');
             successView.classList.remove('hidden');
             const clientPhone = document.querySelector('input[name="phone"]').value || "your number";
-            successMessageBody.innerHTML = `Your slot for <span class="text-brand-skyBlue font-medium">${selectedTimeSlot}</span> is on hold. Sarah Jenkins will call you shortly at <span class="text-brand-leafGreen font-medium">${clientPhone}</span> to finalize your setup coordinates.`;
+            successMessageBody.innerHTML = `Your slot for <span class="text-brand-skyBlue font-medium">${selectedTimeSlot}</span> is on hold. A scheduling representative will call you shortly at <span class="text-brand-leafGreen font-medium">${clientPhone}</span> to finalize your setup coordinates.`;
         }
 
         document.getElementById('reset-booking-engine').addEventListener('click', () => {
