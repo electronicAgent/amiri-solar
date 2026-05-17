@@ -17,10 +17,10 @@
                     },
                     colors: {
                         brand: {
-                            bgDeep: '#002244',      
-                            bgGradient: '#004B93',  
-                            leafGreen: '#76BC21',   
-                            skyBlue: '#00A4E4'       
+                            bgDeep: '#002B54',      /* Exact matching blue from logo background */
+                            bgDark: '#001A33',      /* Rich shadow depth blue */
+                            leafGreen: '#76BC21',   /* Brand leaf green */
+                            skyBlue: '#00A4E4'       /* Clean corporate icon blue */
                         }
                     }
                 }
@@ -29,48 +29,48 @@
     </script>
     <style>
         body {
-            background: linear-gradient(135deg, #00152B 0%, #002244 50%, #003366 100%);
+            /* Smooth background gradient that seamlessly dissolves the logo boundaries */
+            background: linear-gradient(180deg, #002B54 0%, #001A33 100%);
             font-family: 'Inter', sans-serif;
         }
         ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #00152B; }
+        ::-webkit-scrollbar-track { background: #001A33; }
         ::-webkit-scrollbar-thumb { background: #004B93; border-radius: 10px; }
     </style>
 </head>
 <body class="text-slate-100 antialiased min-h-screen flex flex-col items-center justify-between pb-24 sm:pb-8">
 
-    <header class="w-full max-w-4xl mx-auto px-4 pt-8 pb-4 text-center flex flex-col items-center gap-3">
-        <div class="mb-2 transition-transform duration-300 hover:scale-105">
-            <img src="logo%20ASC.png" alt="Amiri Solar Cleaning Logo" onerror="this.style.display='none';" class="max-h-28 w-auto object-contain drop-shadow-lg">
+    <header class="w-full max-w-4xl mx-auto px-4 pt-6 pb-2 flex flex-col items-center gap-2">
+        <div class="flex items-center justify-center gap-3 bg-black/10 border border-white/5 pl-2 pr-5 py-1.5 rounded-full shadow-inner backdrop-blur-md">
+            <img src="logo%20ASC.png" alt="Amiri Solar Cleaning" class="h-10 w-10 object-contain rounded-lg shadow-md">
+            <h1 class="text-lg md:text-xl font-bold tracking-tight text-white">
+                Amiri<span class="text-brand-leafGreen">Solar</span>Cleaning
+            </h1>
         </div>
         
-        <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-white drop-shadow-md">
-            Amiri<span class="text-brand-leafGreen">Solar</span>Cleaning
-        </h1>
-        
-        <div class="flex flex-wrap justify-center gap-2 mt-2 text-xs font-medium tracking-wide uppercase">
-            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-slate-300 flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-skyBlue animate-pulse"></span> Spotless Cleaning
+        <div class="flex flex-wrap justify-center gap-2 mt-1 text-[10px] sm:text-xs font-semibold tracking-wide uppercase opacity-90">
+            <span class="px-2.5 py-0.5 bg-white/5 border border-white/10 rounded-full text-slate-300 flex items-center gap-1.5">
+                <span class="w-1 h-1 rounded-full bg-brand-skyBlue animate-pulse"></span> Spotless Cleaning
             </span>
-            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-slate-300 flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-skyBlue"></span> Panel Protection
+            <span class="px-2.5 py-0.5 bg-white/5 border border-white/10 rounded-full text-slate-300 flex items-center gap-1.5">
+                <span class="w-1 h-1 rounded-full bg-brand-skyBlue"></span> Panel Protection
             </span>
-            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-slate-300 flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-leafGreen"></span> Eco Friendly
+            <span class="px-2.5 py-0.5 bg-white/5 border border-white/10 rounded-full text-slate-300 flex items-center gap-1.5">
+                <span class="w-1 h-1 rounded-full bg-brand-leafGreen"></span> Eco Friendly
             </span>
-            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-slate-300 flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-leafGreen"></span> Maximum Performance
+            <span class="px-2.5 py-0.5 bg-white/5 border border-white/10 rounded-full text-slate-300 flex items-center gap-1.5">
+                <span class="w-1 h-1 rounded-full bg-brand-leafGreen"></span> Maximum Performance
             </span>
         </div>
     </header>
 
-    <main class="w-full max-w-4xl mx-auto px-4 flex-grow flex items-center justify-center my-4">
-        <div class="bg-gradient-to-b from-[#002B54] to-[#001F3F] border border-white/10 rounded-2xl shadow-2xl w-full grid grid-cols-1 sm:grid-cols-12 overflow-hidden backdrop-blur-md">
+    <main class="w-full max-w-4xl mx-auto px-4 flex-grow flex items-center justify-center my-2">
+        <div class="bg-gradient-to-b from-white/5 to-black/20 border border-white/10 rounded-2xl shadow-2xl w-full grid grid-cols-1 sm:grid-cols-12 overflow-hidden backdrop-blur-md">
             
             <div class="sm:col-span-5 bg-black/20 p-6 md:p-8 border-b sm:border-b-0 sm:border-r border-white/10 flex flex-col justify-between">
                 <div>
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 rounded-full bg-brand-bgGradient/50 border border-brand-skyBlue/40 flex items-center justify-center overflow-hidden shadow-inner">
+                        <div class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden shadow-inner">
                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&h=120&q=80" alt="Sarah Jenkins" class="w-full h-full object-cover">
                         </div>
                         <div>
@@ -245,7 +245,7 @@
 
             for (let i = firstDayIndex; i > 0; i--) {
                 const dayDiv = document.createElement('div');
-                dayDiv.className = 'p-2 text-slate-600/40 select-none';
+                dayDiv.className = 'p-2 text-slate-600/30 select-none';
                 dayDiv.innerText = prevLastDay - i + 1;
                 calendarDaysContainer.appendChild(dayDiv);
             }
@@ -273,7 +273,7 @@
             const nextPadding = totalCells % 7 === 0 ? 0 : 7 - (totalCells % 7);
             for (let i = 1; i <= nextPadding; i++) {
                 const dayDiv = document.createElement('div');
-                dayDiv.className = 'p-2 text-slate-600/60 select-none';
+                dayDiv.className = 'p-2 text-slate-600/30 select-none';
                 dayDiv.innerText = i;
                 calendarDaysContainer.appendChild(dayDiv);
             }
@@ -318,36 +318,26 @@
             calendarView.classList.remove('hidden');
         });
 
-        // Background handling API logic hook
         document.getElementById('intake-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const form = e.target;
             const formData = new FormData(form);
             
             fetch(form.action, {
                 method: form.method,
                 body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                headers: { 'Accept': 'application/json' }
             })
             .then(response => {
-                if (response.ok) {
-                    showSuccessState();
-                } else {
-                    alert("Submission error. Please verify the active network route status.");
-                }
+                if (response.ok) { showSuccessState(); } 
+                else { alert("Submission route error."); }
             })
-            .catch(error => {
-                alert("Network routing connection loss detected.");
-            });
+            .catch(error => { alert("Network routing exception."); });
         });
 
         function showSuccessState() {
             formView.classList.add('hidden');
             successView.classList.remove('hidden');
-            
             const clientPhone = document.querySelector('input[name="phone"]').value || "your number";
             successMessageBody.innerHTML = `Your slot for <span class="text-brand-skyBlue font-medium">${selectedTimeSlot}</span> is on hold. Sarah Jenkins will call you shortly at <span class="text-brand-leafGreen font-medium">${clientPhone}</span> to finalize your setup coordinates.`;
         }
