@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Amiri Solar Cleaning - Book a Slot</title>
+    <title>Amiri Solar Cleaning - Premium Booking</title>
     <style>
         :root {
-            --deep-bg: #090E1A;       /* Ultra-clean deep space dark background */
-            --eco-green: #39FF14;     /* Crisp neon green action accent */
+            --bg-gradient: radial-gradient(circle at top, #131C38 0%, #080A11 100%);
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --eco-green: #39FF14;     /* Electric Lime Green */
             --pure-white: #FFFFFF;
-            --text-muted: #8E9AA8;
+            --text-muted: #7E8B9B;
+            --text-accent: #4D76FD;    /* Clean Premium Royal Blue */
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             -webkit-font-smoothing: antialiased;
         }
 
         body {
-            background-color: var(--deep-bg);
+            background: var(--bg-gradient);
             color: var(--pure-white);
-            padding: 12px;
+            padding: 16px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -32,23 +35,23 @@
 
         .app-container {
             width: 100%;
-            max-width: 420px;         /* Slimmed down mobile frame */
+            max-width: 410px;         /* Tight, perfect smartphone width */
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            padding-bottom: 85px;     /* Space for sticky footer */
+            gap: 16px;
+            padding-bottom: 90px;     /* Smooth navigation clearance */
         }
 
-        /* Minimalistic, Slick Brand Header */
+        /* Sophisticated Brand Identity Layer */
         .brand-header {
             text-align: center;
-            padding: 16px 0 8px 0;
+            padding: 20px 0 10px 0;
         }
 
         .brand-header h1 {
-            font-size: 20px;          /* Scaled down for subtle elegance */
-            font-weight: 700;
-            letter-spacing: 0.5px;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
             text-transform: uppercase;
             color: var(--pure-white);
         }
@@ -57,51 +60,72 @@
             color: var(--eco-green);
         }
 
-        /* Seamless Widget Wrapper */
-        .widget-container {
-            width: 100%;
-            background: #FFFFFF;       /* Matches TidyCal's native background perfectly */
-            border-radius: 14px;       /* Smooth modern corners */
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-        }
-
-        /* Slim, Fixed Bottom Sticky Call Action Bar */
-        .sticky-action-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(9, 14, 26, 0.95);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            padding: 12px 16px;
+        /* Ultra-Slim Minimalist Pillar Badges */
+        .pillar-row {
             display: flex;
             justify-content: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            gap: 8px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+
+        .pillar-tag {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.04);
+            padding: 4px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .pillar-tag span {
+            color: var(--eco-green);
+            margin-right: 3px;
+        }
+
+        /* Elite Canvas Wrapper for TidyCal */
+        .premium-widget-deck {
+            width: 100%;
+            background: #FFFFFF;
+            border-radius: 20px;       /* Softer, more high-end fluid corners */
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 
+                        0 0 0 1px var(--card-border);
+        }
+
+        /* Floating Minimal Bottom Safe-Touch Action Bar */
+        .sticky-action-bar {
+            position: fixed;
+            bottom: 16px;              /* Floats slightly above screen edge like modern iOS apps */
+            left: 16px;
+            right: 16px;
+            display: flex;
+            justify-content: center;
             z-index: 9999;
         }
 
         .cta-button {
             width: 100%;
-            max-width: 390px;
-            background-color: var(--eco-green);
-            color: #090E1A;
+            max-width: 378px;
+            background: var(--eco-green);
+            color: #080A11;
             text-align: center;
-            padding: 14px;
-            border-radius: 10px;
+            padding: 16px;
+            border-radius: 14px;
             font-weight: 700;
             font-size: 15px;
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            box-shadow: 0 4px 12px rgba(57, 255, 20, 0.25);
-            display: inline-block;
+            box-shadow: 0 8px 24px rgba(57, 255, 20, 0.3);
             transition: transform 0.1s ease;
         }
         
         .cta-button:active {
-            transform: scale(0.98);   /* Tactile mobile tap effect */
+            transform: scale(0.97);   /* Instant physical haptic-style click feedback */
         }
     </style>
 </head>
@@ -109,22 +133,30 @@
 
 <div class="app-container">
     
-    <!-- Clean, Tight Top Navigation Identity -->
+    <!-- Sophisticated, High-End Header Asset -->
     <div class="brand-header">
         <h1>Amiri <span>Solar Cleaning</span></h1>
+        
+        <!-- Reintroducing the Core Business Pillars in an Ultra-Slick Display -->
+        <div class="pillar-row">
+            <div class="pillar-tag"><span>✓</span> Spotless</div>
+            <div class="pillar-tag"><span>✓</span> Protection</div>
+            <div class="pillar-tag"><span>✓</span> Eco-Friendly</div>
+            <div class="pillar-tag"><span>✓</span> Max Output</div>
+        </div>
     </div>
 
-    <!-- The Entire Interface consolidated strictly into TidyCal's native flow -->
-    <div class="widget-container">
+    <!-- Clean, Fluid Widget Canvas Layout -->
+    <div class="premium-widget-deck">
         <div class="tidycal-embed" data-path="electronicagent/free-first-time-slot-hold-no-payment"></div>
         <script src="https://tidycal.com/js/embed.js" async></script>
     </div>
 
 </div>
 
-<!-- Unshakable Minimal Footer Call Alternative -->
+<!-- Floating Tactile iOS-Style Navigation Bar -->
 <div class="sticky-action-bar">
-    <a href="tel:4084574067" class="cta-button">📞 Quick Call: 408-457-4067</a>
+    <a href="tel:4084574067" class="cta-button">📞 Call Direct: 408-457-4067</a>
 </div>
 
 </body>
