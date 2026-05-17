@@ -17,10 +17,10 @@
                     },
                     colors: {
                         brand: {
-                            bgDeep: '#002B54',      
+                            bgDeep: '#002B54',      /* Rich logo matching background royal blue */
                             bgDark: '#001A33',      
-                            leafGreen: '#76BC21',   
-                            skyBlue: '#00A4E4'       
+                            leafGreen: '#76BC21',   /* Brand leaf green accent */
+                            skyBlue: '#00A4E4'       /* Clean corporate icon blue */
                         }
                     }
                 }
@@ -80,14 +80,14 @@
                         </div>
                     </div>
 
-                    <h2 class="text-xl font-bold text-white mb-4 tracking-tight leading-tight border-t border-white/5 pt-4">
+                    <h2 class="text-xl font-bold text-brand-leafGreen mb-4 tracking-tight leading-tight border-t border-white/5 pt-4">
                         Inspection and cleaning slot hold
                     </h2>
 
                     <div class="space-y-3 my-5 text-sm text-slate-200 flex flex-col items-center sm:items-start">
                         <div class="flex items-center gap-3">
                             <svg class="w-4 h-4 text-brand-skyBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span class="font-medium">45 Minute Session</span>
+                            <span class="font-medium text-slate-300">45 Minute Session</span>
                         </div>
                     </div>
 
@@ -288,7 +288,8 @@
 
             dynamicSlots.forEach(time => {
                 const btn = document.createElement('button');
-                btn.className = 'py-2.5 px-4 bg-white/5 border border-white/10 rounded-xl text-sm font-medium hover:bg-brand-bgGradient/30 hover:border-brand-skyBlue text-white transition text-left flex justify-between items-center group';
+                // FIXED UI: Clean green interactive action buttons matching exact brand coordinates
+                btn.className = 'py-2.5 px-4 bg-brand-leafGreen text-[#001A33] font-bold rounded-xl text-sm tracking-wide text-center hover:bg-lime-400 active:scale-[0.98] transition-all duration-150';
                 btn.innerHTML = `<span>${time}</span>`;
                 
                 btn.addEventListener('click', () => {
