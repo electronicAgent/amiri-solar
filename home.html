@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amiri Solar Cleaning — pure-water cleaning for solar panels, windows, skylights, and glass surfaces in Los Gatos and the Bay Area. Zero chemicals, zero streaks, free quotes.">
+    <meta name="theme-color" content="#002B54">
+    <title>Amiri Solar Cleaning — Solar Panels, Windows &amp; Glass | Pure Water Cleaning in Los Gatos &amp; Bay Area</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Amiri Solar Cleaning — Pure Water Cleaning for Panels, Windows &amp; Glass">
+    <meta property="og:description" content="Solar panels, windows, skylights, glass railings, storefronts. 100% pure water, zero chemicals. Serving Los Gatos and the Bay Area.">
+    <meta property="og:type" content="website">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <link rel="icon" type="image/png" href="logo%20ASC.png">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Sora', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            deepBlue: '#002B54',
+                            leafGreen: '#76BC21',
+                            skyBlue: '#00A4E4',
+                        }
+                    },
+                    animation: {
+                        'fade-up': 'fadeUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Sora', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(90deg, #76BC21 0%, #00A4E4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0,43,84,0.92) 0%, rgba(0,43,84,0.75) 50%, rgba(0,164,228,0.6) 100%);
+        }
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        details[open] summary .faq-icon { transform: rotate(45deg); }
+        .faq-icon { transition: transform 0.25s ease; }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased font-sans">
+
+    <!-- NAV -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <a href="#home" class="flex items-center gap-2.5">
+                <img src="logo%20ASC.png" alt="Amiri Solar Cleaning" class="h-9 w-9 object-contain">
+                <span class="font-bold text-base text-slate-900 hidden sm:inline">
+                    Amiri<span class="text-brand-leafGreen">Solar</span>Cleaning
+                </span>
+            </a>
+            <div class="hidden lg:flex items-center gap-5 text-sm font-medium text-slate-600">
+                <a href="#services" class="hover:text-brand-deepBlue transition">Services</a>
+                <a href="#pure-water" class="hover:text-brand-deepBlue transition">Pure Water</a>
+                <a href="#commercial" class="hover:text-brand-deepBlue transition">Commercial</a>
+                <a href="#why-us" class="hover:text-brand-deepBlue transition">Why Us</a>
+                <a href="#process" class="hover:text-brand-deepBlue transition">Process</a>
+                <a href="#faq" class="hover:text-brand-deepBlue transition">FAQ</a>
+            </div>
+            <a href="index.html" class="inline-flex items-center gap-1.5 px-4 py-2 bg-brand-leafGreen hover:bg-lime-500 text-white font-semibold rounded-lg text-sm transition shadow-sm">
+                Book Now
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="relative min-h-screen flex items-center pt-16 overflow-hidden">
+        <div class="absolute inset-0 -z-10">
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1920&q=80&auto=format&fit=crop" alt="" class="w-full h-full object-cover" loading="eager">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid md:grid-cols-12 gap-10 items-center w-full">
+            <div class="md:col-span-7 text-white space-y-7 animate-fade-up">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur border border-white/20 rounded-full text-xs font-semibold text-brand-leafGreen">
+                    <span class="w-1.5 h-1.5 bg-brand-leafGreen rounded-full animate-pulse"></span>
+                    NOW SERVING LOS GATOS & THE BAY AREA
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] tracking-tight">
+                    Spotless Panels. Crystal Glass.
+                    <span class="block gradient-text mt-2">Powered by Pure Water.</span>
+                </h1>
+                <p class="text-base sm:text-lg text-slate-200 max-w-xl leading-relaxed">
+                    Solar panels, windows, skylights, glass railings &mdash; restored to peak clarity with our <strong class="text-white">100% pure-water</strong> method. Zero chemicals. Zero streaks. Zero damage to surfaces or warranties. Trusted by homeowners, HOAs, and commercial property managers across the Bay Area.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                    <a href="index.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-brand-leafGreen hover:bg-lime-500 text-white font-bold rounded-xl shadow-xl transition text-sm tracking-wide">
+                        Book a Free Inspection
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <a href="#services" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/10 backdrop-blur hover:bg-white/20 border border-white/30 text-white font-semibold rounded-xl transition text-sm">
+                        Explore Services
+                    </a>
+                </div>
+                <div class="flex items-center gap-6 pt-4 text-xs text-slate-300">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-brand-leafGreen" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Fully Insured
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-brand-leafGreen" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Zero Chemicals
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-brand-leafGreen" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Manufacturer-Safe
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-5 hidden md:block">
+                <div class="relative animate-float">
+                    <div class="absolute -inset-4 bg-brand-leafGreen/30 blur-3xl rounded-full"></div>
+                    <div class="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 shadow-2xl">
+                        <div class="flex items-center justify-between mb-5">
+                            <div>
+                                <p class="text-xs text-slate-300 uppercase tracking-wider">Average Output Recovery</p>
+                                <p class="text-4xl font-extrabold text-white mt-1">+27%</p>
+                            </div>
+                            <div class="w-14 h-14 bg-brand-leafGreen/20 rounded-2xl flex items-center justify-center">
+                                <svg class="w-8 h-8 text-brand-leafGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-slate-300">Before cleaning</span>
+                                <span class="font-bold text-white">68% output</span>
+                            </div>
+                            <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                                <div class="h-full bg-red-400/70 rounded-full" style="width: 68%"></div>
+                            </div>
+                            <div class="flex items-center justify-between text-sm pt-2">
+                                <span class="text-slate-300">After ASC service</span>
+                                <span class="font-bold text-brand-leafGreen">95% output</span>
+                            </div>
+                            <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                                <div class="h-full bg-brand-leafGreen rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-300 mt-5 pt-5 border-t border-white/10">Based on average customer panel measurements before and 24 hours after cleaning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS STRIP -->
+    <section class="bg-brand-deepBlue text-white py-10 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="reveal">
+                <p class="text-3xl sm:text-4xl font-extrabold text-brand-leafGreen">30%</p>
+                <p class="text-xs sm:text-sm text-slate-300 mt-1.5 uppercase tracking-wider">Output loss from dirty panels</p>
+            </div>
+            <div class="reveal">
+                <p class="text-3xl sm:text-4xl font-extrabold text-brand-leafGreen">100%</p>
+                <p class="text-xs sm:text-sm text-slate-300 mt-1.5 uppercase tracking-wider">Pure water, zero chemicals</p>
+            </div>
+            <div class="reveal">
+                <p class="text-3xl sm:text-4xl font-extrabold text-brand-leafGreen">24h</p>
+                <p class="text-xs sm:text-sm text-slate-300 mt-1.5 uppercase tracking-wider">Avg. booking response</p>
+            </div>
+            <div class="reveal">
+                <p class="text-3xl sm:text-4xl font-extrabold text-brand-leafGreen">5★</p>
+                <p class="text-xs sm:text-sm text-slate-300 mt-1.5 uppercase tracking-wider">Customer satisfaction</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CLEAN -->
+    <section class="py-20 sm:py-28 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=900&q=80&auto=format&fit=crop" alt="Solar panels on rooftop" class="w-full h-[420px] object-cover" loading="lazy">
+                    <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur rounded-2xl p-4 flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Did you know?</p>
+                            <p class="text-sm text-slate-900 font-medium mt-0.5">A 1mm dust layer can reduce output by 7%.</p>
+                        </div>
+                        <div class="w-10 h-10 bg-brand-leafGreen/10 rounded-xl flex items-center justify-center">
+                            <svg class="w-5 h-5 text-brand-leafGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reveal space-y-5">
+                <p class="text-xs font-bold text-brand-skyBlue uppercase tracking-widest">Why It Matters</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                    Your panels are losing money <span class="text-brand-leafGreen">every single day</span> they go uncleaned.
+                </h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Solar panels are designed to absorb sunlight &mdash; not dirt. Over months, layers of dust, pollen, bird droppings, and California wildfire ash form a silent film that can cut your system&rsquo;s output by 15&ndash;30%. That&rsquo;s real dollars lost on your electric bill and a slower payback on your solar investment.
+                </p>
+                <p class="text-slate-600 leading-relaxed">
+                    Rain alone <em>doesn&rsquo;t</em> clean panels effectively &mdash; it often leaves mineral streaks that worsen performance. Professional cleaning, done right, restores peak output and extends the life of your panels.
+                </p>
+                <ul class="space-y-2.5 pt-3">
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brand-leafGreen flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="text-sm text-slate-700"><strong>Restored output</strong> &mdash; up to 30% efficiency recovery</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brand-leafGreen flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="text-sm text-slate-700"><strong>Longer panel life</strong> &mdash; corrosive grime can permanently damage panels</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brand-leafGreen flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="text-sm text-slate-700"><strong>Warranty protection</strong> &mdash; many manufacturers require regular maintenance</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PURE WATER METHOD -->
+    <section id="pure-water" class="py-20 sm:py-28 bg-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-skyBlue via-brand-leafGreen to-brand-skyBlue"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-brand-skyBlue/10 rounded-full text-xs font-bold text-brand-skyBlue uppercase tracking-widest mb-4">
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z"></path></svg>
+                    The Pure Water Method
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">No chemicals. No streaks. <span class="gradient-text">Just spotless shine.</span></h2>
+                <p class="text-slate-600 mt-4">We use ultra-purified, deionized water &mdash; the same technology professional cleaners use on skyscrapers and solar farms worldwide. It works because clean water doesn&rsquo;t need help.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-14">
+                <div class="reveal p-6 bg-gradient-to-br from-red-50 to-orange-50 border border-red-100 rounded-2xl">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-2xl">&#x2717;</span>
+                        <h3 class="font-bold text-slate-900 text-sm">Tap Water Cleaning</h3>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">Leaves mineral spots and calcium scaling that <strong>cut light transmission within 8 months</strong>. Performance loss accelerates with every wash.</p>
+                </div>
+                <div class="reveal p-6 bg-gradient-to-br from-amber-50 to-yellow-50 border border-amber-100 rounded-2xl">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-2xl">&#x26A0;</span>
+                        <h3 class="font-bold text-slate-900 text-sm">Chemical Cleaners</h3>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">A 2026 Fraunhofer study found <strong>3 of 5 commercial solar cleaners caused permanent output loss up to 5.6%</strong> by attacking anti-reflective coatings.</p>
+                </div>
+                <div class="reveal p-6 bg-gradient-to-br from-emerald-50 to-lime-50 border-2 border-brand-leafGreen/30 rounded-2xl relative">
+                    <div class="absolute -top-2 right-4 px-2 py-0.5 bg-brand-leafGreen text-white text-[10px] font-bold uppercase tracking-wider rounded-full">Our Method</div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-2xl">&#x2713;</span>
+                        <h3 class="font-bold text-slate-900 text-sm">Pure Filtered Water</h3>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">Deionized water rinses panels and glass to a <strong>spot-free finish that holds &gt;98.7% transmittance for 22+ months</strong>. No residue. No risk to warranty.</p>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-100 rounded-3xl p-8 sm:p-10 grid md:grid-cols-2 gap-8 items-center reveal">
+                <div>
+                    <p class="text-xs font-bold text-brand-skyBlue uppercase tracking-widest mb-3">How It Works</p>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-4 leading-tight">Tap water in. <span class="text-brand-leafGreen">Mineral-free water out.</span></h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-5">Our trucks are equipped with multi-stage filtration: sediment filter, carbon filter, and a deionization resin tank. The result is water with a TDS (Total Dissolved Solids) reading of <strong>under 5 ppm</strong> &mdash; over 50&times; cleaner than what comes out of your hose.</p>
+                    <ul class="space-y-2 text-sm text-slate-700">
+                        <li class="flex items-start gap-2"><span class="text-brand-leafGreen font-bold">&#x2713;</span> Safe for solar panels &mdash; protects anti-reflective coating</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-leafGreen font-bold">&#x2713;</span> Safe for glass &mdash; no etching, no spotting</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-leafGreen font-bold">&#x2713;</span> Safe for plants, pets, and stormwater runoff</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-leafGreen font-bold">&#x2713;</span> Manufacturer-approved &mdash; keeps warranties intact</li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 text-center">
+                        <p class="text-3xl font-extrabold text-brand-leafGreen">0</p>
+                        <p class="text-xs text-slate-500 mt-1 uppercase tracking-wider">Chemicals used</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 text-center">
+                        <p class="text-3xl font-extrabold text-brand-leafGreen">&lt;5</p>
+                        <p class="text-xs text-slate-500 mt-1 uppercase tracking-wider">PPM water purity</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 text-center">
+                        <p class="text-3xl font-extrabold text-brand-leafGreen">22mo</p>
+                        <p class="text-xs text-slate-500 mt-1 uppercase tracking-wider">Spot-free duration</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 text-center">
+                        <p class="text-3xl font-extrabold text-brand-leafGreen">100%</p>
+                        <p class="text-xs text-slate-500 mt-1 uppercase tracking-wider">Eco-safe runoff</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20 sm:py-28 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+                <p class="text-xs font-bold text-brand-skyBlue uppercase tracking-widest mb-3">Our Services</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">Solar, glass, and everything in between &mdash; under one team.</h2>
+                <p class="text-slate-600 mt-4">From rooftop solar arrays to second-story windows and storefront glass, we deliver pure-water, manufacturer-safe cleaning across every surface.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="reveal group p-6 bg-white border border-slate-100 rounded-3xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-brand-leafGreen/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-brand-leafGreen group-hover:scale-110 transition">
+                        <svg class="w-6 h-6 text-brand-leafGreen group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Solar Panel Cleaning</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-3">Pure-water cleaning for home solar systems. Safe for the anti-reflective coating and fully warranty-compliant.</p>
+                    <ul class="text-[11px] text-slate-500 space-y-1">
+                        <li>&bull; Rooftop &amp; ground-mount arrays</li>
+                        <li>&bull; Before/after output report</li>
+                        <li>&bull; Bird-mess &amp; pollen removal</li>
+                    </ul>
+                </div>
+
+                <div class="reveal group p-6 bg-white border border-slate-100 rounded-3xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-brand-skyBlue/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-brand-skyBlue group-hover:scale-110 transition">
+                        <svg class="w-6 h-6 text-brand-skyBlue group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM4 12h16M12 4v16"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Window &amp; Glass Cleaning</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-3">Streak-free results on every glass surface &mdash; same pure-water tech, water-fed pole reach up to the second story and beyond.</p>
+                    <ul class="text-[11px] text-slate-500 space-y-1">
+                        <li>&bull; Windows, skylights, glass railings</li>
+                        <li>&bull; Storefronts &amp; office facades</li>
+                        <li>&bull; Mirrors &amp; glass doors</li>
+                    </ul>
+                </div>
+
+                <div class="reveal group p-6 bg-white border border-slate-100 rounded-3xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-brand-leafGreen/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-brand-leafGreen group-hover:scale-110 transition">
+                        <svg class="w-6 h-6 text-brand-leafGreen group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Commercial &amp; HOA</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-3">Recurring maintenance for property managers, HOAs, offices, and storefronts. Solar plus glass in a single mobilization &mdash; one vendor, one invoice.</p>
+                    <ul class="text-[11px] text-slate-500 space-y-1">
+                        <li>&bull; Quarterly / semi-annual plans</li>
+                        <li>&bull; Portfolio &amp; volume pricing</li>
+                        <li>&bull; COI &amp; compliance documentation</li>
+                    </ul>
+                </div>
+
+                <div class="reveal group p-6 bg-white border border-slate-100 rounded-3xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-brand-deepBlue/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-brand-deepBlue group-hover:scale-110 transition">
+                        <svg class="w-6 h-6 text-brand-deepBlue group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Inspection &amp; Protection</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-3">Visual inspection of solar arrays to catch cracks, hot spots, and wiring issues before they cost you. Stay ahead of warranty deadlines.</p>
+                    <ul class="text-[11px] text-slate-500 space-y-1">
+                        <li>&bull; Panel-by-panel inspection</li>
+                        <li>&bull; Wiring &amp; connector check</li>
+                        <li>&bull; Written condition report</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMERCIAL / PROPERTY MANAGERS -->
+    <section id="commercial" class="py-20 sm:py-28 bg-brand-deepBlue text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-skyBlue/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-leafGreen/20 rounded-full blur-3xl"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-10 items-center">
+            <div class="md:col-span-7 reveal space-y-5">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur border border-white/20 rounded-full text-xs font-bold text-brand-leafGreen uppercase tracking-widest">
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                    For Property Managers &amp; Facilities
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
+                    One vendor. Solar plus glass.
+                    <span class="block gradient-text mt-1">Portfolio pricing.</span>
+                </h2>
+                <p class="text-slate-200 leading-relaxed">
+                    Stop juggling separate vendors for solar maintenance and window cleaning. We handle both in a single mobilization &mdash; one truck, one crew, one invoice. Built for property managers, HOAs, office parks, schools, and commercial sites that need quarterly maintenance done right.
+                </p>
+
+                <div class="space-y-3 pt-2">
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brand-leafGreen flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="text-sm text-slate-200"><strong class="text-white">Quarterly maintenance contracts</strong> &mdash; predictable budget, no missed visits</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brand-leafGreen flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="text-sm text-slate-200"><strong class="text-white">Fully insured &amp; bonded</strong> &mdash; Certificate of Insurance provided same day for every property</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brand-leafGreen flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="text-sm text-slate-200"><strong class="text-white">Safety-trained crews</strong> &mdash; fall protection, height work, OSHA-compliant procedures</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brand-leafGreen flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="text-sm text-slate-200"><strong class="text-white">Portfolio &amp; volume pricing</strong> &mdash; discounted rates across multiple buildings under one contract</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brand-leafGreen flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="text-sm text-slate-200"><strong class="text-white">Detailed reporting</strong> &mdash; before/after photos, output measurements, compliance records on every visit</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-3 pt-5">
+                    <a href="mailto:AmiriSolarCleaning@gmail.com?subject=Commercial%20Portfolio%20Quote%20Request" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-leafGreen hover:bg-lime-500 text-white font-bold rounded-xl shadow-lg transition text-sm tracking-wide">
+                        Request Portfolio Quote
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <a href="tel:4084574067" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 backdrop-blur hover:bg-white/20 border border-white/30 text-white font-semibold rounded-xl transition text-sm">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                        Call 408-457-4067
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:col-span-5 reveal">
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-white/10 backdrop-blur border border-white/15 rounded-2xl p-5 text-center">
+                        <div class="w-12 h-12 bg-brand-leafGreen/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-brand-leafGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <p class="font-bold text-white text-sm">COI Ready</p>
+                        <p class="text-[11px] text-slate-300 mt-1">Same-day proof of insurance</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur border border-white/15 rounded-2xl p-5 text-center">
+                        <div class="w-12 h-12 bg-brand-skyBlue/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-brand-skyBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        </div>
+                        <p class="font-bold text-white text-sm">Bonded</p>
+                        <p class="text-[11px] text-slate-300 mt-1">Janitorial service bond</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur border border-white/15 rounded-2xl p-5 text-center">
+                        <div class="w-12 h-12 bg-brand-leafGreen/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-brand-leafGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.657-1.79 3-4 3s-4-1.343-4-3 1.79-3 4-3 4 1.343 4 3zm12-3c0 1.657-1.79 3-4 3s-4-1.343-4-3 1.79-3 4-3 4 1.343 4 3z"></path></svg>
+                        </div>
+                        <p class="font-bold text-white text-sm">Solar + Glass</p>
+                        <p class="text-[11px] text-slate-300 mt-1">One crew, one invoice</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur border border-white/15 rounded-2xl p-5 text-center">
+                        <div class="w-12 h-12 bg-brand-skyBlue/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-brand-skyBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <p class="font-bold text-white text-sm">Quarterly Plans</p>
+                        <p class="text-[11px] text-slate-300 mt-1">Predictable budgeting</p>
+                    </div>
+                </div>
+
+                <div class="mt-4 p-5 bg-white/5 backdrop-blur border border-white/10 rounded-2xl">
+                    <p class="text-xs font-bold uppercase tracking-wider text-brand-leafGreen mb-2">Who we serve</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[11px] px-2.5 py-1 bg-white/10 rounded-full text-slate-200">Property Managers</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/10 rounded-full text-slate-200">HOAs</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/10 rounded-full text-slate-200">Office Parks</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/10 rounded-full text-slate-200">Schools</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/10 rounded-full text-slate-200">Retail &amp; Storefronts</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/10 rounded-full text-slate-200">Warehouses</span>
+                        <span class="text-[11px] px-2.5 py-1 bg-white/10 rounded-full text-slate-200">Solar Installers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US (4 PILLARS) -->
+    <section id="why-us" class="py-20 sm:py-28 bg-gradient-to-b from-slate-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+                <p class="text-xs font-bold text-brand-skyBlue uppercase tracking-widest mb-3">Why Amiri Solar Cleaning</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">Four reasons homeowners trust us.</h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="reveal p-6 bg-white border border-slate-100 rounded-2xl text-center shadow-sm hover:shadow-xl transition">
+                    <div class="w-16 h-16 mx-auto bg-brand-leafGreen/10 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-brand-leafGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-slate-900">Spotless Cleaning</h3>
+                    <p class="text-xs text-slate-500 mt-2 leading-relaxed">Deionized water and soft-bristle tools remove every speck without streaks or residue.</p>
+                </div>
+
+                <div class="reveal p-6 bg-white border border-slate-100 rounded-2xl text-center shadow-sm hover:shadow-xl transition">
+                    <div class="w-16 h-16 mx-auto bg-brand-skyBlue/10 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-brand-skyBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-slate-900">Panel Protection</h3>
+                    <p class="text-xs text-slate-500 mt-2 leading-relaxed">Manufacturer-safe methods that won&rsquo;t void warranties or scratch your panel surface.</p>
+                </div>
+
+                <div class="reveal p-6 bg-white border border-slate-100 rounded-2xl text-center shadow-sm hover:shadow-xl transition">
+                    <div class="w-16 h-16 mx-auto bg-brand-leafGreen/10 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-brand-leafGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12a8 8 0 11-16 0c0-3 2-7 8-12 6 5 8 9 8 12z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-slate-900">100% Pure Water</h3>
+                    <p class="text-xs text-slate-500 mt-2 leading-relaxed">Zero chemicals, ever. Deionized water under 5 PPM &mdash; safer for your panels, plants, pets, and runoff.</p>
+                </div>
+
+                <div class="reveal p-6 bg-white border border-slate-100 rounded-2xl text-center shadow-sm hover:shadow-xl transition">
+                    <div class="w-16 h-16 mx-auto bg-brand-skyBlue/10 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-brand-skyBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-slate-900">Maximum Performance</h3>
+                    <p class="text-xs text-slate-500 mt-2 leading-relaxed">Output measured before and after. We don&rsquo;t leave until your system delivers peak efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="py-20 sm:py-28 bg-brand-deepBlue text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-leafGreen/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-skyBlue/20 rounded-full blur-3xl"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <p class="text-xs font-bold text-brand-leafGreen uppercase tracking-widest mb-3">How It Works</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">Simple, transparent, and on your schedule.</h2>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="reveal relative">
+                    <div class="text-6xl font-extrabold text-white/10 absolute -top-3 right-2">01</div>
+                    <div class="relative">
+                        <div class="w-12 h-12 bg-brand-leafGreen rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-base mb-1.5">Book a Slot</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">Pick a date and time online in under a minute. We&rsquo;ll confirm by phone within 24 hours.</p>
+                    </div>
+                </div>
+
+                <div class="reveal relative">
+                    <div class="text-6xl font-extrabold text-white/10 absolute -top-3 right-2">02</div>
+                    <div class="relative">
+                        <div class="w-12 h-12 bg-brand-skyBlue rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-base mb-1.5">We Arrive On-Time</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">Our certified technician shows up with all gear, ladders, and water-purification on board.</p>
+                    </div>
+                </div>
+
+                <div class="reveal relative">
+                    <div class="text-6xl font-extrabold text-white/10 absolute -top-3 right-2">03</div>
+                    <div class="relative">
+                        <div class="w-12 h-12 bg-brand-leafGreen rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.657-1.79 3-4 3s-4-1.343-4-3 1.79-3 4-3 4 1.343 4 3zm12-3c0 1.657-1.79 3-4 3s-4-1.343-4-3 1.79-3 4-3 4 1.343 4 3zM9 10l12-3"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-base mb-1.5">Deep Clean</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">Manufacturer-safe purified-water cleaning. No streaks, no scratches, no residue.</p>
+                    </div>
+                </div>
+
+                <div class="reveal relative">
+                    <div class="text-6xl font-extrabold text-white/10 absolute -top-3 right-2">04</div>
+                    <div class="relative">
+                        <div class="w-12 h-12 bg-brand-skyBlue rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-base mb-1.5">Report & Done</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">You receive a before/after report with output improvement and any inspection findings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE AREA -->
+    <section id="area" class="py-20 sm:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal space-y-5 order-2 md:order-1">
+                <p class="text-xs font-bold text-brand-skyBlue uppercase tracking-widest">Service Area</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">Proudly serving the South Bay &amp; Silicon Valley.</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Based in Los Gatos, we serve homeowners and businesses across the South Bay and greater Silicon Valley. If your panels are in our service zone, we&rsquo;ll be there.
+                </p>
+                <ul class="grid grid-cols-2 gap-x-4 gap-y-2 pt-3">
+                    <li class="flex items-center gap-2 text-sm text-slate-700"><span class="w-1.5 h-1.5 bg-brand-leafGreen rounded-full"></span>Los Gatos</li>
+                    <li class="flex items-center gap-2 text-sm text-slate-700"><span class="w-1.5 h-1.5 bg-brand-leafGreen rounded-full"></span>Saratoga</li>
+                    <li class="flex items-center gap-2 text-sm text-slate-700"><span class="w-1.5 h-1.5 bg-brand-leafGreen rounded-full"></span>San Jose</li>
+                    <li class="flex items-center gap-2 text-sm text-slate-700"><span class="w-1.5 h-1.5 bg-brand-leafGreen rounded-full"></span>Campbell</li>
+                    <li class="flex items-center gap-2 text-sm text-slate-700"><span class="w-1.5 h-1.5 bg-brand-leafGreen rounded-full"></span>Cupertino</li>
+                    <li class="flex items-center gap-2 text-sm text-slate-700"><span class="w-1.5 h-1.5 bg-brand-leafGreen rounded-full"></span>Sunnyvale</li>
+                    <li class="flex items-center gap-2 text-sm text-slate-700"><span class="w-1.5 h-1.5 bg-brand-leafGreen rounded-full"></span>Mountain View</li>
+                    <li class="flex items-center gap-2 text-sm text-slate-700"><span class="w-1.5 h-1.5 bg-brand-leafGreen rounded-full"></span>Palo Alto</li>
+                    <li class="flex items-center gap-2 text-sm text-slate-700"><span class="w-1.5 h-1.5 bg-brand-leafGreen rounded-full"></span>Santa Clara</li>
+                    <li class="flex items-center gap-2 text-sm text-slate-700"><span class="w-1.5 h-1.5 bg-brand-leafGreen rounded-full"></span>Milpitas</li>
+                </ul>
+                <p class="text-xs text-slate-500 pt-3">Not seeing your city? Give us a call &mdash; we frequently expand.</p>
+            </div>
+
+            <div class="reveal order-1 md:order-2">
+                <div class="relative aspect-square rounded-3xl bg-gradient-to-br from-brand-deepBlue to-brand-skyBlue overflow-hidden shadow-2xl">
+                    <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.4) 100%);"></div>
+                    <!-- Stylized map -->
+                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 400" fill="none">
+                        <defs>
+                            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="white" stroke-opacity="0.08" stroke-width="0.5"/>
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#grid)"/>
+                        <!-- Pulsing pin -->
+                        <circle cx="200" cy="210" r="60" fill="#76BC21" fill-opacity="0.15"/>
+                        <circle cx="200" cy="210" r="30" fill="#76BC21" fill-opacity="0.3">
+                            <animate attributeName="r" values="30;50;30" dur="3s" repeatCount="indefinite"/>
+                            <animate attributeName="fill-opacity" values="0.4;0.1;0.4" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="200" cy="210" r="8" fill="#76BC21"/>
+                        <circle cx="200" cy="210" r="3" fill="white"/>
+                    </svg>
+                    <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur rounded-2xl p-5">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-brand-leafGreen/10 rounded-xl flex items-center justify-center">
+                                <svg class="w-5 h-5 text-brand-leafGreen" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Headquartered in</p>
+                                <p class="text-sm font-bold text-slate-900">578 More Ave, Los Gatos, CA 95032</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 sm:py-28 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+                <p class="text-xs font-bold text-brand-skyBlue uppercase tracking-widest mb-3">Frequently Asked</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">Common questions, clear answers.</h2>
+            </div>
+
+            <div class="space-y-3">
+                <details class="reveal group bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-brand-skyBlue/30 transition">
+                    <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-900 text-sm sm:text-base">Do you only clean solar panels?</h3>
+                        <span class="faq-icon text-brand-leafGreen text-2xl font-bold flex-shrink-0">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        No &mdash; we clean any glass surface. That includes residential and commercial windows (interior and exterior), skylights, glass railings, sliding glass doors, mirrors, storefronts, and office facades. Our water-fed-pole system reaches up to the second story without ladders, and we have ladder access for higher work. Solar is where we started, glass is what we love.
+                    </div>
+                </details>
+
+                <details class="reveal group bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-brand-skyBlue/30 transition">
+                    <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-900 text-sm sm:text-base">What chemicals do you use on my panels and windows?</h3>
+                        <span class="faq-icon text-brand-leafGreen text-2xl font-bold flex-shrink-0">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        <strong>Zero. None. Just deionized water.</strong> Most cleaning products marketed for solar panels contain compounds that attack the anti-reflective glass coating &mdash; a 2026 Fraunhofer CSP study found 3 of 5 commercial cleaners caused permanent output loss. We skip the chemicals entirely. Our trucks carry multi-stage filtration that strips tap water down to under 5 PPM TDS, so it dries spot-free with nothing left behind.
+                    </div>
+                </details>
+
+                <details class="reveal group bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-brand-skyBlue/30 transition">
+                    <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-900 text-sm sm:text-base">How often should I clean my solar panels?</h3>
+                        <span class="faq-icon text-brand-leafGreen text-2xl font-bold flex-shrink-0">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        For most Bay Area homes, we recommend a professional cleaning every 6 months &mdash; once before summer peak production and again after fall pollen and wildfire season. Homes near construction, freeways, or under trees may benefit from quarterly visits.
+                    </div>
+                </details>
+
+                <details class="reveal group bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-brand-skyBlue/30 transition">
+                    <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-900 text-sm sm:text-base">Will cleaning void my panel warranty?</h3>
+                        <span class="faq-icon text-brand-leafGreen text-2xl font-bold flex-shrink-0">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        No &mdash; in fact, the opposite. Most major panel manufacturers <em>require</em> regular cleaning to maintain warranty coverage. We use only manufacturer-approved methods (deionized water and soft-bristle tools) so your warranty stays intact.
+                    </div>
+                </details>
+
+                <details class="reveal group bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-brand-skyBlue/30 transition">
+                    <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-900 text-sm sm:text-base">Do I need to be home during the service?</h3>
+                        <span class="faq-icon text-brand-leafGreen text-2xl font-bold flex-shrink-0">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        Not required &mdash; we just need water access (an outdoor spigot is enough) and clear roof access. We&rsquo;ll text you a photo report when finished and leave the area cleaner than we found it.
+                    </div>
+                </details>
+
+                <details class="reveal group bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-brand-skyBlue/30 transition">
+                    <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-900 text-sm sm:text-base">How much does it cost?</h3>
+                        <span class="faq-icon text-brand-leafGreen text-2xl font-bold flex-shrink-0">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        Pricing depends on the number of panels, roof access, and panel condition. We provide a free, no-obligation quote after a quick look. Most residential cleanings pay for themselves in 1&ndash;2 months of recovered output.
+                    </div>
+                </details>
+
+                <details class="reveal group bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-brand-skyBlue/30 transition">
+                    <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-900 text-sm sm:text-base">Is the process safe for my roof?</h3>
+                        <span class="faq-icon text-brand-leafGreen text-2xl font-bold flex-shrink-0">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        Absolutely. We use lightweight, fall-protected equipment and only soft-bristle tools that won&rsquo;t scratch panels or damage shingles. We&rsquo;re fully insured for both worker and property liability.
+                    </div>
+                </details>
+
+                <details class="reveal group bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-brand-skyBlue/30 transition">
+                    <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-900 text-sm sm:text-base">Do you offer recurring maintenance contracts for property managers?</h3>
+                        <span class="faq-icon text-brand-leafGreen text-2xl font-bold flex-shrink-0">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        Yes &mdash; quarterly maintenance is our most popular plan for property managers, HOAs, and commercial facilities. We also offer semi-annual and monthly schedules. Portfolio pricing applies across multiple buildings under a single contract, and we provide compliance documentation, before/after photo reports, and output measurements on every visit. Request a portfolio quote through the form above or call us directly.
+                    </div>
+                </details>
+
+                <details class="reveal group bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-brand-skyBlue/30 transition">
+                    <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-900 text-sm sm:text-base">Can you provide a Certificate of Insurance (COI) for our building?</h3>
+                        <span class="faq-icon text-brand-leafGreen text-2xl font-bold flex-shrink-0">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        Yes &mdash; we provide a Certificate of Insurance same-day for every property we service. Our coverage includes general liability, commercial auto, and workers&rsquo; compensation. We&rsquo;re also bonded. If your management company or building owner requires us to be listed as an additional insured, just let us know during the walkthrough.
+                    </div>
+                </details>
+
+                <details class="reveal group bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-brand-skyBlue/30 transition">
+                    <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-900 text-sm sm:text-base">Can you handle multi-story or high-rise buildings safely?</h3>
+                        <span class="faq-icon text-brand-leafGreen text-2xl font-bold flex-shrink-0">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        Our water-fed-pole system reaches the second story without ladders, which handles most low-rise commercial work. For taller buildings or skylight access, our crews are trained in fall protection and OSHA-compliant procedures, and we coordinate rope-access or lift equipment when needed. We&rsquo;ll assess the access plan during your free walkthrough and quote accordingly.
+                    </div>
+                </details>
+
+                <details class="reveal group bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-brand-skyBlue/30 transition">
+                    <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-900 text-sm sm:text-base">What if it rains the day of my appointment?</h3>
+                        <span class="faq-icon text-brand-leafGreen text-2xl font-bold flex-shrink-0">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                        We&rsquo;ll reschedule at no charge. Cleaning panels in rain is unsafe and produces poor results &mdash; we&rsquo;ll pick a clear day that works for you.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-20 sm:py-28 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative overflow-hidden bg-gradient-to-br from-brand-deepBlue via-brand-deepBlue to-brand-skyBlue rounded-3xl p-10 sm:p-16 text-white shadow-2xl reveal">
+                <div class="absolute -top-20 -right-20 w-80 h-80 bg-brand-leafGreen/20 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-brand-skyBlue/30 rounded-full blur-3xl"></div>
+
+                <div class="relative max-w-2xl">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-5">
+                        Ready to recover your <span class="gradient-text">lost solar output?</span>
+                    </h2>
+                    <p class="text-slate-200 mb-8 text-base sm:text-lg leading-relaxed">
+                        Book a free inspection in under a minute. We&rsquo;ll handle the rest.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="index.html" class="inline-flex items-center justify-center gap-2 px-7 py-4 bg-brand-leafGreen hover:bg-lime-500 text-white font-bold rounded-xl shadow-xl transition text-sm tracking-wide">
+                            Book Free Inspection
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                        <a href="tel:4084574067" class="inline-flex items-center justify-center gap-2 px-7 py-4 bg-white/10 backdrop-blur hover:bg-white/20 border border-white/30 text-white font-semibold rounded-xl transition text-sm">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                            Call 408-457-4067
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-300 py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-10">
+            <div class="md:col-span-2 space-y-4">
+                <div class="flex items-center gap-2.5">
+                    <img src="logo%20ASC.png" alt="Amiri Solar Cleaning" class="h-10 w-10 object-contain">
+                    <span class="font-bold text-base text-white">
+                        Amiri<span class="text-brand-leafGreen">Solar</span>Cleaning
+                    </span>
+                </div>
+                <p class="text-sm leading-relaxed max-w-sm text-slate-400">
+                    Pure-water cleaning for solar panels, windows, skylights, and glass surfaces. Zero chemicals. Serving Los Gatos and the greater Bay Area.
+                </p>
+            </div>
+
+            <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-white mb-4">Services</p>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#services" class="hover:text-brand-leafGreen transition">Solar Panel Cleaning</a></li>
+                    <li><a href="#services" class="hover:text-brand-leafGreen transition">Window &amp; Glass</a></li>
+                    <li><a href="#commercial" class="hover:text-brand-leafGreen transition">Commercial &amp; Property Mgmt</a></li>
+                    <li><a href="#services" class="hover:text-brand-leafGreen transition">Inspection &amp; Reporting</a></li>
+                    <li><a href="#pure-water" class="hover:text-brand-leafGreen transition">Pure Water Method</a></li>
+                    <li><a href="index.html" class="hover:text-brand-leafGreen transition">Book Online</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-white mb-4">Contact</p>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start gap-2.5">
+                        <svg class="w-4 h-4 text-brand-leafGreen flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                        <a href="tel:4084574067" class="hover:text-brand-leafGreen transition">408-457-4067</a>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <svg class="w-4 h-4 text-brand-leafGreen flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                        <a href="mailto:AmiriSolarCleaning@gmail.com" class="hover:text-brand-leafGreen transition break-all">AmiriSolarCleaning@gmail.com</a>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <svg class="w-4 h-4 text-brand-leafGreen flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                        <span>578 More Ave<br>Los Gatos, CA 95032</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <p>&copy; 2026 Amiri Solar Cleaning. All rights reserved.</p>
+            <p>Serving Los Gatos &amp; the Bay Area &bull; Fully Insured &bull; Licensed</p>
+        </div>
+    </footer>
+
+    <script>
+        // Reveal-on-scroll
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    io.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    </script>
+</body>
+</html>
