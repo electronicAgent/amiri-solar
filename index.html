@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Book your FREE estimate with Amiri Solar Cleaning. First visit is completely free. Solar panels, windows, skylights & glass. 100% pure water, zero chemicals.">
+    <meta name="description" content="Book a cleaning slot with Amiri Solar Cleaning — solar panels, windows, skylights, and glass surfaces. 100% pure water, zero chemicals. We confirm by phone within 24 hours.">
     <meta name="theme-color" content="#002B54">
-    <title>Book Your FREE Estimate — Amiri Solar Cleaning</title>
+    <title>Book Your FREE Estimate — Amiri Solar Cleaning | Solar &amp; Glass</title>
     <link rel="icon" type="image/png" href="logo ASC.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,9 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Sora', 'sans-serif'] },
+                    fontFamily: {
+                        sans: ['Sora', 'sans-serif'],
+                    },
                     colors: {
                         brand: {
                             deepBlue: '#002B54',
@@ -31,167 +33,232 @@
 <body class="bg-[#F4F7FA] text-slate-800 antialiased font-sans min-h-screen p-4 md:p-8">
 
     <!-- Top mini-nav -->
-    <div class="w-full max-w-5xl mx-auto mb-6 flex items-center justify-between">
+    <div class="w-full max-w-7xl mx-auto mb-4 flex items-center justify-between">
         <a href="home.html" class="inline-flex items-center gap-1.5 px-3 py-2 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold text-slate-700 hover:text-brand-deepBlue transition shadow-sm">
-            ← Learn About Us
+            <svg class="w-3.5 h-3.5 text-brand-skyBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Learn About Us
         </a>
-        <a href="tel:4084574067" class="inline-flex items-center gap-1.5 px-3 py-2 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold text-slate-700 hover:text-brand-leafGreen transition shadow-sm">
-            📞 408-457-4067
+        <a href="tel:4084574067" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold text-slate-700 hover:text-brand-leafGreen transition shadow-sm">
+            <svg class="w-3.5 h-3.5 text-brand-leafGreen" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+            408-457-4067
         </a>
     </div>
 
-    <!-- Header -->
-    <div class="max-w-3xl mx-auto text-center mb-8">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white border border-slate-200 rounded-full text-sm font-semibold text-slate-700 mb-4">
-            ✓ First Visit is <span class="text-brand-leafGreen font-bold">FREE</span>
-        </div>
-        <h1 class="text-3xl md:text-4xl font-bold text-slate-900">Book Your <span class="text-brand-leafGreen">FREE</span> Estimate</h1>
-        <p class="text-slate-600 mt-3 max-w-md mx-auto">No obligation. We inspect your property and give you a clear quote. 100% pure water — zero chemicals.</p>
+    <!-- B2B / Commercial inquiry banner -->
+    <div class="w-full max-w-7xl mx-auto mb-4">
+        <a href="mailto:AmiriSolarCleaning@gmail.com?subject=Commercial%20Portfolio%20Quote%20Request" class="flex items-center justify-between gap-3 px-4 py-3 bg-gradient-to-r from-brand-deepBlue to-brand-skyBlue text-white rounded-xl shadow-sm hover:shadow-lg transition group">
+            <div class="flex items-center gap-3 min-w-0">
+                <div class="flex-shrink-0 w-9 h-9 bg-white/15 rounded-lg flex items-center justify-center">
+                    <svg class="w-4.5 h-4.5 text-brand-leafGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                </div>
+                <div class="min-w-0">
+                    <p class="text-[11px] uppercase tracking-wider text-slate-300 font-semibold leading-none">Property Manager or Commercial Site?</p>
+                    <p class="text-xs sm:text-sm tracking-wide mt-1 truncate">First visit is FREE — request a portfolio walkthrough quote</p>
+                </div>
+            </div>
+            <svg class="w-4 h-4 text-brand-leafGreen flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+        </a>
     </div>
 
-    <!-- BOOKING FORM - CENTERED -->
-    <div class="max-w-3xl mx-auto">
-        <div class="bg-brand-deepBlue text-white p-6 md:p-8 rounded-3xl shadow-2xl">
+    <main class="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-start pb-28">
 
-            <!-- Calendar View -->
-            <div id="calendar-view">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-lg font-semibold" id="month-year-label">June 2026</h3>
-                    <div class="flex gap-2">
-                        <button id="prev-month" class="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition">←</button>
-                        <button id="next-month" class="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition">→</button>
+        <!-- LEFT COLUMN -->
+        <div class="md:col-span-5 bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-xl space-y-6 flex flex-col justify-between h-full">
+            <div class="space-y-6">
+                <div class="text-center w-full">
+                    <div class="w-28 h-28 mx-auto p-1 bg-white rounded-3xl border border-slate-100 shadow-inner flex items-center justify-center overflow-hidden mb-4">
+                        <img src="logo ASC.png" alt="Amiri Solar Cleaning Logo" class="h-24 w-24 object-contain">
                     </div>
+                    <h1 class="text-2xl font-bold tracking-tight text-slate-900">
+                        Amiri<span class="text-brand-leafGreen">Solar</span>Cleaning
+                    </h1>
+                    <p class="text-xs text-brand-skyBlue font-semibold uppercase tracking-wider mt-0.5">Professional Maintenance Solutions</p>
                 </div>
 
-                <div class="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-slate-300 mb-2">
-                    <div>SUN</div><div>MON</div><div>TUE</div><div>WED</div><div>THU</div><div>FRI</div><div>SAT</div>
-                </div>
-                <div class="grid grid-cols-7 gap-1 text-center text-sm font-medium" id="calendar-days"></div>
+                <!-- CENTERED FREE ESTIMATE TITLE -->
+                <h2 class="text-xl font-bold text-slate-900 mt-6 pt-6 border-t border-slate-100 leading-tight text-center">
+                    Book Your <span class="text-brand-leafGreen">FREE</span> Estimate
+                </h2>
 
-                <div class="mt-6 pt-5 border-t border-white/10">
-                    <p class="text-sm font-semibold text-slate-300 mb-3" id="slots-header">Available Slots</p>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3" id="slots-container"></div>
+                <p class="text-xs text-slate-600 leading-relaxed max-w-md mx-auto md:mx-0">
+                    Solar panels, windows, skylights, or glass surfaces — pick a window that works for you. We use 100% pure filtered water (zero chemicals) and call within 24 hours to confirm details.
+                </p>
+
+                <div class="flex items-center gap-2 px-3 py-2 bg-brand-leafGreen/10 border border-brand-leafGreen/20 rounded-lg text-xs text-slate-700">
+                    <svg class="w-4 h-4 text-brand-leafGreen flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span><strong>No chemicals.</strong> Only pure deionized water — safe for panels, plants, and pets.</span>
                 </div>
             </div>
 
-            <!-- Form View -->
-            <div id="form-view" class="hidden">
-                <button id="back-to-calendar" class="text-sm text-brand-skyBlue hover:text-white flex items-center gap-1 mb-4">← Back to calendar</button>
-                
-                <h3 class="text-xl font-bold mb-1">Confirm your FREE estimate slot</h3>
-                <p class="text-sm text-slate-300 mb-6" id="form-target-slot-details"></p>
+            <div class="w-full mt-auto pt-6 border-t border-slate-100 space-y-3.5 text-xs text-slate-600">
+                <div class="flex items-center justify-between">
+                    <span>Mutual availability system</span>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" class="sr-only peer" checked disabled>
+                        <div class="w-7 h-4 bg-slate-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-brand-leafGreen"></div>
+                    </label>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span>Target Timezone</span>
+                    <span class="text-slate-900 font-medium">(-07:00) PDT - Los Angeles</span>
+                </div>
+            </div>
+        </div>
 
-                <form id="intake-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                    <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
-                    <input type="hidden" name="subject" value="New FREE Estimate Request - Amiri Solar Cleaning">
-                    <input type="hidden" name="selected_slot" id="hidden-slot-input">
+        <!-- RIGHT COLUMN (Booking Form) - Original -->
+        <div class="md:col-span-7 bg-brand-deepBlue text-white p-6 md:p-8 rounded-2xl shadow-xl space-y-6 flex flex-col justify-between h-full min-h-[500px]">
+            <div id="booking-container" class="h-full flex flex-col justify-between">
 
+                <div id="calendar-view" class="h-full flex flex-col justify-between">
                     <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1.5">Full Name</label>
-                        <input type="text" name="name" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl text-sm text-slate-900 focus:outline-none focus:border-brand-skyBlue">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-base font-semibold" id="month-year-label">June 2026</h3>
+                            <div class="flex gap-1.5">
+                                <button id="prev-month" class="p-1.5 rounded-lg bg-white/5 text-slate-300 hover:text-white hover:bg-white/10 transition">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                                </button>
+                                <button id="next-month" class="p-1.5 rounded-lg bg-white/5 text-slate-300 hover:text-white hover:bg-white/10 transition">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-slate-300 mb-2.5">
+                            <div>SUN</div><div>MON</div><div>TUE</div><div>WED</div><div>THU</div><div>FRI</div><div>SAT</div>
+                        </div>
+                        <div class="grid grid-cols-7 gap-1 text-center text-sm font-medium" id="calendar-days"></div>
                     </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1.5">Phone Number</label>
-                        <input type="tel" name="phone" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl text-sm text-slate-900 focus:outline-none focus:border-brand-skyBlue">
+                    <div class="mt-4 pt-4 border-t border-white/10">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-slate-300 mb-3" id="slots-header">Available Slots</p>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2" id="slots-container"></div>
                     </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1.5">What do you need cleaned?</label>
-                        <select name="service_type" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl text-sm text-slate-900 focus:outline-none focus:border-brand-skyBlue">
-                            <option value="" disabled selected>Select service...</option>
-                            <option value="Solar Panels">Solar Panel Cleaning</option>
-                            <option value="Windows & Glass">Window & Glass Cleaning</option>
-                            <option value="Solar + Windows">Solar Panels + Windows & Glass</option>
-                            <option value="Skylights">Skylights / Glass Railings</option>
-                            <option value="Commercial">Commercial / Storefront</option>
-                            <option value="Inspection Only">Inspection & Report Only</option>
-                            <option value="Other">Other — we'll discuss</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1.5">Service Address</label>
-                        <input type="text" name="address" required placeholder="578 More Ave, Los Gatos, CA" class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl text-sm text-slate-900 focus:outline-none focus:border-brand-skyBlue">
-                    </div>
+                </div>
 
-                    <button type="submit" class="w-full mt-2 py-3.5 bg-brand-leafGreen hover:bg-lime-400 text-white font-bold rounded-2xl text-base tracking-wide transition">
-                        Confirm My FREE Estimate Slot
+                <div id="form-view" class="hidden text-slate-200">
+                    <button id="back-to-calendar" class="text-xs font-medium text-brand-skyBlue hover:text-white flex items-center gap-1 mb-4 transition">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+                        Back to calendar
                     </button>
-                </form>
-            </div>
+                    <h3 class="text-xl font-bold text-white mb-1">Lock down your selected slot</h3>
+                    <p class="text-xs text-slate-300 mb-6" id="form-target-slot-details"></p>
 
-            <!-- Success View -->
-            <div id="success-view" class="hidden text-center py-8">
-                <div class="w-20 h-20 bg-brand-leafGreen/20 border-2 border-brand-leafGreen rounded-full flex items-center justify-center mx-auto mb-6">
-                    <svg class="w-10 h-10 text-brand-leafGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    <form id="intake-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4 text-slate-900">
+                        <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
+                        <input type="hidden" name="subject" value="New FREE Estimate Request - Amiri Solar Cleaning">
+                        <input type="hidden" name="selected_slot" id="hidden-slot-input">
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Your Full Name</label>
+                            <input type="text" name="name" required placeholder="John Doe" class="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-900 focus:outline-none focus:border-brand-skyBlue transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Phone Number</label>
+                            <input type="tel" name="phone" required placeholder="(408) 555-0199" class="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-900 focus:outline-none focus:border-brand-skyBlue transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Service Type</label>
+                            <select name="service_type" required class="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-900 focus:outline-none focus:border-brand-skyBlue transition appearance-none cursor-pointer">
+                                <option value="" disabled selected>Choose what you need cleaned…</option>
+                                <option value="Solar Panels">Solar Panel Cleaning</option>
+                                <option value="Windows & Glass">Window &amp; Glass Cleaning</option>
+                                <option value="Solar + Windows">Solar Panels + Windows &amp; Glass</option>
+                                <option value="Skylights">Skylights / Glass Railings</option>
+                                <option value="Commercial">Commercial / Storefront</option>
+                                <option value="Inspection Only">Inspection &amp; Report Only</option>
+                                <option value="Other">Other — we’ll discuss on the call</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Service Address</label>
+                            <input type="text" name="address" required placeholder="578 More Ave, Los Gatos, CA" class="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-900 focus:outline-none focus:border-brand-skyBlue transition">
+                        </div>
+                        <button type="submit" class="w-full mt-4 py-3 bg-brand-leafGreen hover:bg-lime-400 text-white font-bold rounded-xl shadow-lg text-sm tracking-wide transition-colors">
+                            Book My FREE Estimate
+                        </button>
+                    </form>
                 </div>
-                <h3 class="text-2xl font-bold mb-3">Your FREE Estimate is Confirmed!</h3>
-                <p class="text-slate-200 mb-6 max-w-sm mx-auto" id="success-message-body"></p>
-                <button id="reset-booking-engine" class="px-6 py-2 bg-white/10 border border-white/20 rounded-xl text-sm font-medium hover:bg-white/20 transition">
-                    Book Another FREE Estimate
-                </button>
+
+                <div id="success-view" class="hidden flex-grow flex flex-col items-center justify-center text-center p-8">
+                    <div class="w-20 h-20 bg-brand-leafGreen/20 border-2 border-brand-leafGreen rounded-full flex items-center justify-center text-brand-leafGreen mb-6 shadow-xl">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Your FREE Estimate Slot is Reserved!</h3>
+                    <p class="text-sm text-slate-200 max-w-sm mb-6 font-light" id="success-message-body"></p>
+                    <button id="reset-booking-engine" class="px-6 py-2 bg-white/5 border border-white/10 rounded-xl text-xs font-medium text-slate-300 hover:text-white hover:bg-white/10 transition">
+                        Book Another FREE Estimate
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 right-0 p-4 z-50">
+        <a href="tel:4084574067" class="flex items-center justify-between w-full max-w-xl mx-auto bg-brand-deepBlue text-white px-6 py-4 rounded-xl shadow-xl border border-white/5 hover:bg-slate-900 group">
+            <div class="flex items-center gap-3">
+                <div class="p-2 bg-black/10 rounded-lg group-hover:bg-brand-leafGreen transition-colors">
+                    <svg class="w-5 h-5 text-brand-leafGreen group-hover:text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                </div>
+                <div>
+                    <p class="text-[11px] uppercase tracking-wider text-slate-300 font-semibold leading-none">Need immediate help?</p>
+                    <p class="text-sm tracking-wide mt-0.5">CALL US DIRECT: 408-457-4067</p>
+                </div>
+            </div>
+            <svg class="w-5 h-5 text-brand-skyBlue group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+    </footer>
 
     <script>
-        // JavaScript remains the same as before
+        // Your original JavaScript code (unchanged)
         let displayDate = new Date(2026, 4, 18);
         let selectedDate = new Date(2026, 4, 18);
         let selectedTimeSlot = "";
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
         const views = {
             calendar: document.getElementById('calendar-view'),
             form: document.getElementById('form-view'),
             success: document.getElementById('success-view')
-        };
+        }
         const labels = {
             monthYear: document.getElementById('month-year-label'),
             slotsHeader: document.getElementById('slots-header'),
             formDetails: document.getElementById('form-target-slot-details'),
             successMessage: document.getElementById('success-message-body')
-        };
+        }
         const containers = {
             days: document.getElementById('calendar-days'),
             slots: document.getElementById('slots-container'),
             hiddenInput: document.getElementById('hidden-slot-input')
-        };
-
+        }
         function initApp() {
             renderCalendar();
             renderSlots();
         }
-
         function switchView(target) {
             Object.values(views).forEach(v => v.classList.add('hidden'));
             views[target].classList.remove('hidden');
         }
-
         function renderCalendar() {
             containers.days.innerHTML = '';
             const year = displayDate.getFullYear();
             const month = displayDate.getMonth();
             labels.monthYear.innerText = `${months[month]} ${year}`;
-
             const firstDayIndex = new Date(year, month, 1).getDay();
             const lastDay = new Date(year, month + 1, 0).getDate();
             const prevLastDay = new Date(year, month, 0).getDate();
-
             for (let i = firstDayIndex; i > 0; i--) {
                 const dayDiv = document.createElement('div');
-                dayDiv.className = 'p-2 text-slate-400 select-none';
+                dayDiv.className = 'p-2 text-slate-600/60 select-none';
                 dayDiv.innerText = prevLastDay - i + 1;
                 containers.days.appendChild(dayDiv);
             }
-
             for (let day = 1; day <= lastDay; day++) {
                 const dayDiv = document.createElement('div');
                 dayDiv.innerText = day;
                 const isSelected = selectedDate.getDate() === day && selectedDate.getMonth() === month && selectedDate.getFullYear() === year;
                 if (isSelected) {
-                    dayDiv.className = 'p-2 text-white bg-brand-leafGreen rounded-full cursor-pointer font-bold shadow';
+                    dayDiv.className = 'p-2 text-slate-900 bg-brand-leafGreen rounded-full cursor-pointer shadow-md font-bold';
                 } else {
-                    dayDiv.className = 'p-2 text-white cursor-pointer hover:bg-white/10 rounded-full transition';
+                    dayDiv.className = 'p-2 text-slate-100 cursor-pointer hover:bg-white/10 rounded-full transition';
                 }
                 dayDiv.addEventListener('click', () => {
                     selectedDate = new Date(year, month, day);
@@ -200,19 +267,24 @@
                 });
                 containers.days.appendChild(dayDiv);
             }
+            const totalCells = firstDayIndex + lastDay;
+            const nextPadding = totalCells % 7 === 0 ? 0 : 7 - (totalCells % 7);
+            for (let i = 1; i <= nextPadding; i++) {
+                const dayDiv = document.createElement('div');
+                dayDiv.className = 'p-2 text-slate-600/60 select-none';
+                dayDiv.innerText = i;
+                containers.days.appendChild(dayDiv);
+            }
         }
-
         function renderSlots() {
             const dayOfWeekName = weekdays[selectedDate.getDay()];
             const dayNum = selectedDate.getDate();
             labels.slotsHeader.innerText = `Available Slots — ${dayOfWeekName} ${dayNum}th`;
-
             const slotsData = ["08:00 AM", "08:15 AM", "10:00 AM", "11:15 AM", "01:40 PM", "03:00 PM"];
             containers.slots.innerHTML = '';
-
             slotsData.forEach(time => {
                 const btn = document.createElement('button');
-                btn.className = 'py-3 px-4 bg-brand-leafGreen text-slate-900 font-bold rounded-xl text-sm hover:bg-lime-400 active:scale-[0.98] transition shadow';
+                btn.className = 'py-3 px-4 bg-brand-leafGreen text-slate-900 font-bold rounded-lg text-sm tracking-wide text-center hover:bg-lime-400 active:scale-[0.98] transition-all duration-150 shadow-md';
                 btn.innerText = time;
                 btn.addEventListener('click', () => {
                     selectedTimeSlot = time;
@@ -221,34 +293,20 @@
                 containers.slots.appendChild(btn);
             });
         }
-
         function navigateToForm() {
             const dateString = `${weekdays[selectedDate.getDay()]} ${selectedDate.getDate()}th`;
-            labels.formDetails.innerText = `You're booking a FREE estimate on ${dateString} at ${selectedTimeSlot}`;
+            labels.formDetails.innerText = `You are reserving a FREE estimate slot on ${dateString} at ${selectedTimeSlot}`;
             containers.hiddenInput.value = `${dateString} @ ${selectedTimeSlot}`;
             switchView('form');
         }
-
-        document.getElementById('prev-month').addEventListener('click', () => {
-            displayDate.setMonth(displayDate.getMonth() - 1);
-            renderCalendar();
-        });
-        document.getElementById('next-month').addEventListener('click', () => {
-            displayDate.setMonth(displayDate.getMonth() + 1);
-            renderCalendar();
-        });
+        document.getElementById('prev-month').addEventListener('click', () => { displayDate.setMonth(displayDate.getMonth() - 1); renderCalendar(); });
+        document.getElementById('next-month').addEventListener('click', () => { displayDate.setMonth(displayDate.getMonth() + 1); renderCalendar(); });
         document.getElementById('back-to-calendar').addEventListener('click', () => switchView('calendar'));
-        document.getElementById('reset-booking-engine').addEventListener('click', () => {
-            document.getElementById('intake-form').reset();
-            initApp();
-            switchView('calendar');
-        });
-
+        document.getElementById('reset-booking-engine').addEventListener('click', () => { document.getElementById('intake-form').reset(); initApp(); switchView('calendar'); });
         document.getElementById('intake-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const form = e.target;
             const formData = new FormData(form);
-
             fetch(form.action, {
                 method: form.method,
                 body: formData,
@@ -259,14 +317,13 @@
                     views.success.classList.remove('hidden');
                     views.form.classList.add('hidden');
                     const clientPhone = document.querySelector('input[name="phone"]').value || "your number";
-                    labels.successMessage.innerHTML = `Your FREE estimate slot for <span class="text-brand-skyBlue">${selectedTimeSlot}</span> is confirmed. We will call you at <span class="text-brand-leafGreen font-bold">${clientPhone}</span> shortly.`;
+                    labels.successMessage.innerHTML = `Your FREE estimate slot for <span class="text-brand-skyBlue font-medium">${selectedTimeSlot}</span> is on hold. We will call you shortly at <span class="text-brand-leafGreen font-bold">${clientPhone}</span>.`;
                 } else {
-                    alert("Something went wrong. Please try again.");
+                    alert("Submission error.");
                 }
             })
-            .catch(() => alert("Submission failed. Please try again."));
+            .catch(error => { alert("Submission Error."); });
         });
-
         initApp();
     </script>
 </body>
