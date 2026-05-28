@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Book a cleaning slot with Amiri Solar Cleaning — solar panels, windows, skylights, and glass surfaces. 100% pure water, zero chemicals. We confirm by phone within 24 hours.">
+    <meta name="description" content="Book your FREE estimate with Amiri Solar Cleaning — solar panels, windows, skylights, and glass surfaces. First visit is completely free. 100% pure water, zero chemicals. We confirm by phone within 24 hours.">
     <meta name="theme-color" content="#002B54">
     <title>Book Your FREE Estimate — Amiri Solar Cleaning | Solar &amp; Glass</title>
     <link rel="icon" type="image/png" href="logo ASC.png">
@@ -46,7 +46,7 @@
 
     <!-- B2B / Commercial inquiry banner -->
     <div class="w-full max-w-7xl mx-auto mb-4">
-        <a href="mailto:AmiriSolarCleaning@gmail.com?subject=Commercial%20Portfolio%20Quote%20Request" class="flex items-center justify-between gap-3 px-4 py-3 bg-gradient-to-r from-brand-deepBlue to-brand-skyBlue text-white rounded-xl shadow-sm hover:shadow-lg transition group">
+        <a href="mailto:amirisolarcleaning@gmail.com?subject=Commercial%20Portfolio%20Quote%20Request" class="flex items-center justify-between gap-3 px-4 py-3 bg-gradient-to-r from-brand-deepBlue to-brand-skyBlue text-white rounded-xl shadow-sm hover:shadow-lg transition group">
             <div class="flex items-center gap-3 min-w-0">
                 <div class="flex-shrink-0 w-9 h-9 bg-white/15 rounded-lg flex items-center justify-center">
                     <svg class="w-4.5 h-4.5 text-brand-leafGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
@@ -81,7 +81,7 @@
                 </h2>
 
                 <p class="text-xs text-slate-600 leading-relaxed max-w-md mx-auto md:mx-0">
-                    Solar panels, windows, skylights, or glass surfaces — pick a window that works for you. We use 100% pure filtered water (zero chemicals) and call within 24 hours to confirm details.
+                    First visit is completely FREE with no obligation. We inspect your solar panels, windows, skylights or glass surfaces and give you a clear quote. 100% pure filtered water — zero chemicals.
                 </p>
 
                 <div class="flex items-center gap-2 px-3 py-2 bg-brand-leafGreen/10 border border-brand-leafGreen/20 rounded-lg text-xs text-slate-700">
@@ -105,10 +105,11 @@
             </div>
         </div>
 
-        <!-- RIGHT COLUMN (Booking Form) - Original -->
+        <!-- RIGHT COLUMN - BOOKING FORM -->
         <div class="md:col-span-7 bg-brand-deepBlue text-white p-6 md:p-8 rounded-2xl shadow-xl space-y-6 flex flex-col justify-between h-full min-h-[500px]">
             <div id="booking-container" class="h-full flex flex-col justify-between">
 
+                <!-- CALENDAR VIEW -->
                 <div id="calendar-view" class="h-full flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
@@ -133,17 +134,31 @@
                     </div>
                 </div>
 
+                <!-- FORM VIEW -->
                 <div id="form-view" class="hidden text-slate-200">
                     <button id="back-to-calendar" class="text-xs font-medium text-brand-skyBlue hover:text-white flex items-center gap-1 mb-4 transition">
                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
                         Back to calendar
                     </button>
-                    <h3 class="text-xl font-bold text-white mb-1">Lock down your selected slot</h3>
+                    <h3 class="text-xl font-bold text-white mb-1">Lock in your FREE estimate slot</h3>
                     <p class="text-xs text-slate-300 mb-6" id="form-target-slot-details"></p>
 
+                    <!-- UPDATED FORM WITH EMAIL RECIPIENT -->
                     <form id="intake-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4 text-slate-900">
+                        
+                        <!-- Web3Forms Access Key -->
                         <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
+                        
+                        <!-- RECIPIENT EMAIL - amirisolarcleaning@gmail.com -->
+                        <input type="hidden" name="email" value="amirisolarcleaning@gmail.com">
+                        
+                        <!-- From Name -->
+                        <input type="hidden" name="from_name" value="Amiri Solar Cleaning Website">
+                        
+                        <!-- Subject -->
                         <input type="hidden" name="subject" value="New FREE Estimate Request - Amiri Solar Cleaning">
+                        
+                        <!-- Hidden selected slot -->
                         <input type="hidden" name="selected_slot" id="hidden-slot-input">
 
                         <div>
@@ -169,7 +184,7 @@
                         </div>
                         <div>
                             <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Service Address</label>
-                            <input type="text" name="address" required placeholder="578 More Ave, Los Gatos, CA" class="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-900 focus:outline-none focus:border-brand-skyBlue transition">
+                            <input type="text" name="address" required placeholder="996 Almaden Lake Dr 103, San Jose, CA 95123" class="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-900 focus:outline-none focus:border-brand-skyBlue transition">
                         </div>
                         <button type="submit" class="w-full mt-4 py-3 bg-brand-leafGreen hover:bg-lime-400 text-white font-bold rounded-xl shadow-lg text-sm tracking-wide transition-colors">
                             Book My FREE Estimate
@@ -177,6 +192,7 @@
                     </form>
                 </div>
 
+                <!-- SUCCESS VIEW -->
                 <div id="success-view" class="hidden flex-grow flex flex-col items-center justify-center text-center p-8">
                     <div class="w-20 h-20 bg-brand-leafGreen/20 border-2 border-brand-leafGreen rounded-full flex items-center justify-center text-brand-leafGreen mb-6 shadow-xl">
                         <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
@@ -207,7 +223,6 @@
     </footer>
 
     <script>
-        // Your original JavaScript code (unchanged)
         let displayDate = new Date(2026, 4, 18);
         let selectedDate = new Date(2026, 4, 18);
         let selectedTimeSlot = "";
@@ -317,12 +332,12 @@
                     views.success.classList.remove('hidden');
                     views.form.classList.add('hidden');
                     const clientPhone = document.querySelector('input[name="phone"]').value || "your number";
-                    labels.successMessage.innerHTML = `Your FREE estimate slot for <span class="text-brand-skyBlue font-medium">${selectedTimeSlot}</span> is on hold. We will call you shortly at <span class="text-brand-leafGreen font-bold">${clientPhone}</span>.`;
+                    labels.successMessage.innerHTML = `Your FREE estimate slot for <span class="text-brand-skyBlue font-medium">${selectedTimeSlot}</span> is on hold. We will call you shortly at <span class="text-brand-leafGreen font-bold">${clientPhone}</span> to finalize your setup coordinates.`;
                 } else {
-                    alert("Submission error.");
+                    alert("Submission error. Please try again.");
                 }
             })
-            .catch(error => { alert("Submission Error."); });
+            .catch(error => { alert("Submission Error. Please try again."); });
         });
         initApp();
     </script>
