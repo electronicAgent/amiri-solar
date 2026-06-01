@@ -21,7 +21,7 @@
 
     <div class="grid md:grid-cols-12 gap-6">
         
-        <!-- LEFT INFO (stacks on mobile) -->
+        <!-- LEFT: Info -->
         <div class="md:col-span-5">
             <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-100">
                 <div class="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full mb-3">
@@ -35,7 +35,7 @@
         <!-- RIGHT: Calendar + Form -->
         <div class="md:col-span-7 bg-white rounded-3xl p-6 md:p-8 border border-slate-100">
             
-            <!-- SELECTED TIME DISPLAY -->
+            <!-- Selected Slot -->
             <div id="selected-box" class="hidden mb-5 p-4 bg-emerald-50 border border-emerald-200 rounded-2xl">
                 <div class="text-emerald-700 text-sm font-semibold">YOU SELECTED</div>
                 <div id="selected-text" class="text-lg font-bold text-emerald-800"></div>
@@ -43,10 +43,58 @@
 
             <h2 class="font-bold text-xl mb-3">Select Date &amp; Time</h2>
 
-            <!-- TIME SLOTS (Mobile friendly) -->
+            <!-- Calendar -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <div class="font-semibold">May 2026</div>
+                </div>
+                
+                <!-- Calendar Grid -->
+                <div class="grid grid-cols-7 gap-1 text-center text-sm">
+                    <div class="text-slate-400 py-1">S</div>
+                    <div class="text-slate-400 py-1">M</div>
+                    <div class="text-slate-400 py-1">T</div>
+                    <div class="text-slate-400 py-1">W</div>
+                    <div class="text-slate-400 py-1">T</div>
+                    <div class="text-slate-400 py-1">F</div>
+                    <div class="text-slate-400 py-1">S</div>
+
+                    <!-- Dates -->
+                    <div class="p-2 text-slate-300">26</div><div class="p-2 text-slate-300">27</div><div class="p-2 text-slate-300">28</div><div class="p-2 text-slate-300">29</div><div class="p-2 text-slate-300">30</div>
+                    <div onclick="selectDate(this, 'May 1')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">1</div>
+                    <div onclick="selectDate(this, 'May 2')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">2</div>
+                    
+                    <div onclick="selectDate(this, 'May 3')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">3</div>
+                    <div onclick="selectDate(this, 'May 4')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">4</div>
+                    <div onclick="selectDate(this, 'May 5')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">5</div>
+                    <div onclick="selectDate(this, 'May 6')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">6</div>
+                    <div onclick="selectDate(this, 'May 7')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">7</div>
+                    <div onclick="selectDate(this, 'May 8')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">8</div>
+                    <div onclick="selectDate(this, 'May 9')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">9</div>
+                    
+                    <div onclick="selectDate(this, 'May 10')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">10</div>
+                    <div onclick="selectDate(this, 'May 11')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">11</div>
+                    <div onclick="selectDate(this, 'May 12')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">12</div>
+                    <div onclick="selectDate(this, 'May 13')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">13</div>
+                    <div onclick="selectDate(this, 'May 14')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">14</div>
+                    <div onclick="selectDate(this, 'May 15')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">15</div>
+                    <div onclick="selectDate(this, 'May 16')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">16</div>
+                    
+                    <div onclick="selectDate(this, 'May 17')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">17</div>
+                    <div onclick="selectDate(this, 'May 18', true)" class="p-2 bg-emerald-600 text-white rounded-xl cursor-pointer font-bold">18</div>
+                    <div onclick="selectDate(this, 'May 19')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">19</div>
+                    <div onclick="selectDate(this, 'May 20')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">20</div>
+                    <div onclick="selectDate(this, 'May 21')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">21</div>
+                    <div onclick="selectDate(this, 'May 22')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">22</div>
+                    <div onclick="selectDate(this, 'May 23')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer">23</div>
+                </div>
+            </div>
+
+            <!-- Time Slots -->
             <div class="mb-6">
-                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 gap-3" id="time-slots">
-                    <!-- Time slots added by JavaScript below -->
+                <div class="text-sm font-medium mb-2 text-slate-600">Available Times</div>
+                <div class="grid grid-cols-3 gap-3" id="time-slots">
+                    <!-- Filled by JS -->
                 </div>
             </div>
 
@@ -56,29 +104,29 @@
                 <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
                 <input type="hidden" name="email" value="amirisolarcleaning@gmail.com">
                 <input type="hidden" name="cc" value="electronic.agent@gmail.com">
-                <input type="hidden" name="subject" value="New FREE Estimate - Amiri Solar Cleaning">
-                <input type="hidden" name="selected_slot" id="hidden-slot">
+                <input type="hidden" name="subject" value="New FREE Estimate Request">
+                <input type="hidden" name="selected_slot" id="hidden-selected-slot">
 
                 <div>
                     <label class="block text-xs font-bold text-slate-600 mb-1">FULL NAME</label>
                     <input type="text" name="name" required placeholder="John Doe"
-                           class="w-full px-4 py-3 border border-slate-200 rounded-2xl text-base focus:outline-none focus:border-emerald-500">
+                           class="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:outline-none focus:border-emerald-500">
                 </div>
 
                 <div>
                     <label class="block text-xs font-bold text-slate-600 mb-1">PHONE NUMBER</label>
                     <input type="tel" name="phone" required placeholder="(408) 555-0199"
-                           class="w-full px-4 py-3 border border-slate-200 rounded-2xl text-base focus:outline-none focus:border-emerald-500">
+                           class="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:outline-none focus:border-emerald-500">
                 </div>
 
                 <div>
                     <label class="block text-xs font-bold text-slate-600 mb-1">SERVICE ADDRESS</label>
                     <input type="text" name="address" value="996 Almaden Lake Dr 103, San Jose, CA 95123" required
-                           class="w-full px-4 py-3 border border-slate-200 rounded-2xl text-base focus:outline-none focus:border-emerald-500">
+                           class="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:outline-none focus:border-emerald-500">
                 </div>
 
                 <button type="submit"
-                        class="w-full py-4 bg-emerald-600 active:bg-emerald-700 text-white font-bold text-lg rounded-2xl mt-2">
+                        class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-lg rounded-2xl mt-2">
                     Book My FREE Estimate
                 </button>
             </form>
@@ -87,37 +135,54 @@
 </div>
 
 <script>
-function selectSlot(element, dateTime) {
-    // Highlight selected
-    document.querySelectorAll('#time-slots button').forEach(b => b.classList.remove('ring-2', 'ring-emerald-600', 'bg-emerald-600', 'text-white'));
-    element.classList.add('ring-2', 'ring-emerald-600', 'bg-emerald-600', 'text-white');
+let currentDate = "";
 
-    // Show selected time
-    document.getElementById('selected-box').classList.remove('hidden');
-    document.getElementById('selected-text').innerHTML = dateTime;
+function selectDate(element, date, isToday = false) {
+    // Remove previous selection
+    document.querySelectorAll('.grid-cols-7 > div').forEach(el => el.classList.remove('bg-emerald-600', 'text-white', 'font-bold'));
+    
+    // Highlight selected date
+    element.classList.add('bg-emerald-600', 'text-white', 'font-bold');
 
-    // Set hidden field
-    document.getElementById('hidden-slot').value = dateTime;
+    currentDate = date;
+    
+    // Show time slots
+    showTimeSlots(date);
 }
 
-// Load time slots
-window.onload = function() {
+function showTimeSlots(date) {
     const container = document.getElementById('time-slots');
+    container.innerHTML = '';
+    
     const times = ["08:00 AM", "08:15 AM", "10:00 AM", "11:15 AM", "01:40 PM", "03:00 PM"];
     
     times.forEach(time => {
         const btn = document.createElement('button');
         btn.type = "button";
-        btn.className = "py-3.5 px-4 bg-emerald-100 hover:bg-emerald-200 active:bg-emerald-300 text-emerald-800 font-semibold rounded-2xl text-sm transition";
+        btn.className = "py-3 px-4 bg-emerald-100 hover:bg-emerald-200 active:bg-emerald-300 text-emerald-800 font-semibold rounded-2xl text-sm transition";
         btn.innerText = time;
         
         btn.onclick = () => {
-            // You can change the date dynamically later
-            selectSlot(btn, `May 18, 2026 @ ${time}`);
+            selectTime(btn, date, time);
         };
         
         container.appendChild(btn);
     });
+}
+
+function selectTime(element, date, time) {
+    // Highlight selected time
+    document.querySelectorAll('#time-slots button').forEach(b => b.classList.remove('ring-2', 'ring-emerald-600', 'bg-emerald-600', 'text-white'));
+    element.classList.add('ring-2', 'ring-emerald-600', 'bg-emerald-600', 'text-white');
+
+    const fullSelection = `${date} at ${time}`;
+    
+    // Show selected box
+    document.getElementById('selected-box').classList.remove('hidden');
+    document.getElementById('selected-text').innerHTML = fullSelection;
+
+    // Set hidden field for form
+    document.getElementById('hidden-selected-slot').value = fullSelection;
 }
 </script>
 
