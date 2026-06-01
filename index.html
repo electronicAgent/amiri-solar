@@ -42,8 +42,8 @@
                 <h2 class="font-bold text-2xl text-white">Select Date & Time</h2>
             </div>
 
-            <!-- Blue Background for Calendar -->
-            <div class="p-6" style="background-color: #e0f2fe;">
+            <!-- Light Blue Calendar Area -->
+            <div class="p-6" style="background-color: #bae6fd;">
 
                 <div id="selected-box" class="hidden mb-6 p-4 bg-white border border-emerald-200 rounded-2xl">
                     <div class="text-emerald-700 text-xs font-bold">YOU SELECTED</div>
@@ -66,7 +66,7 @@
                     <div class="grid grid-cols-3 gap-3" id="time-slots"></div>
                 </div>
 
-                <!-- FORM -->
+                <!-- FORM - Stacked fields -->
                 <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
                     <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
                     <input type="hidden" name="email" value="amirisolarcleaning@gmail.com">
@@ -121,7 +121,7 @@ function renderCalendar() {
     for (let day = 1; day <= daysInMonth; day++) {
         const cellDate = new Date(year, month, day);
         const cell = document.createElement('div');
-        cell.className = "p-3 text-center text-lg font-bold rounded-2xl bg-white";
+        cell.className = "p-3 text-center text-lg font-bold rounded-2xl bg-white shadow-sm";
 
         if (cellDate < today) {
             cell.className = "p-3 text-center text-lg font-bold rounded-2xl text-slate-300 cursor-not-allowed";
