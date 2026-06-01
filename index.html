@@ -56,13 +56,14 @@
                     <div id="selected-text" class="text-2xl font-bold text-emerald-800"></div>
                 </div>
 
-                <!-- Calendar -->
+                <!-- Calendar Navigation -->
                 <div class="flex justify-between items-center mb-6">
                     <button onclick="prevMonth()" class="text-4xl text-emerald-600">←</button>
                     <div id="month-year" class="font-bold text-2xl" style="color: #002B54;"></div>
                     <button onclick="nextMonth()" class="text-4xl text-emerald-600">→</button>
                 </div>
 
+                <!-- Calendar Grid -->
                 <div class="grid grid-cols-7 gap-2 text-center mb-8" id="calendar-grid"></div>
 
                 <!-- Time Slots -->
@@ -74,7 +75,6 @@
                 <!-- FORM -->
                 <div id="form-section">
                     <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
-                        
                         <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
                         <input type="hidden" name="subject" value="New FREE Estimate Request - Amiri Solar Cleaning">
                         <input type="hidden" name="selected_slot" id="hidden-slot">
@@ -126,19 +126,19 @@
 <script>
 let currentDate = new Date();
 
-// Show nice success message after Web3Forms submission
+// Show success message after submission
 document.getElementById('booking-form').addEventListener('submit', function() {
     setTimeout(function() {
         const form = document.getElementById('booking-form');
         const nameField = form.querySelector('input[name="name"]');
-        const customerName = nameField ? nameField.value : "there";
+        const customerName = nameField ? nameField.value.split(' ')[0] : "there";
         const selectedSlot = document.getElementById('hidden-slot').value || "";
 
         document.getElementById('form-section').classList.add('hidden');
         document.getElementById('success-message').classList.remove('hidden');
-        document.getElementById('customer-name').textContent = customerName.split(' ')[0];
+        document.getElementById('customer-name').textContent = customerName;
         document.getElementById('confirmed-slot').textContent = selectedSlot;
-    }, 900);
+    }, 800);
 });
 
 function renderCalendar() {
