@@ -63,7 +63,7 @@
                     <button onclick="nextMonth()" class="text-4xl text-emerald-600">→</button>
                 </div>
 
-                <!-- Calendar Grid -->
+                <!-- Calendar -->
                 <div class="grid grid-cols-7 gap-2 text-center mb-8" id="calendar-grid"></div>
 
                 <!-- Time Slots -->
@@ -126,7 +126,6 @@
 <script>
 let currentDate = new Date();
 
-// Show success message after submission
 document.getElementById('booking-form').addEventListener('submit', function() {
     setTimeout(function() {
         const form = document.getElementById('booking-form');
