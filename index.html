@@ -127,7 +127,6 @@ function renderCalendar() {
         cell.className = "p-4 text-center text-lg font-bold rounded-2xl bg-white shadow-sm";
 
         const isPastDate = cellDate < today;
-        const isToday = cellDate.getTime() === today.getTime();
 
         if (isPastDate) {
             cell.className = "p-4 text-center text-lg font-bold rounded-2xl text-slate-300 cursor-not-allowed";
@@ -136,7 +135,8 @@ function renderCalendar() {
                 document.querySelectorAll('#calendar-grid > div').forEach(d => d.classList.remove('!bg-emerald-600', '!text-white'));
                 cell.classList.add('!bg-emerald-600', '!text-white');
                 const dateStr = `${monthNames[month]} ${day}, ${year}`;
-                showTimeSlots(dateStr, isToday);
+                const isTodayClick = cellDate.getTime() === today.getTime();
+                showTimeSlots(dateStr, isTodayClick);
                 setTimeout(() => document.getElementById('time-slots-section').scrollIntoView({ behavior: 'smooth' }), 300);
             };
         }
@@ -151,18 +151,16 @@ function showTimeSlots(dateStr, isToday = false) {
 
     let times = ["06:00 AM", "07:00 AM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "01:00 PM", "02:00 PM", "03:00 PM"];
 
-    const now = new Date();
-    const currentHour = now.getHours();
-
     if (isToday) {
-        // Filter out past times on today
-        times = times.filter(time => {
-            const hour = parseInt(time.split(':')[0]);
-            const isPM = time.includes('PM');
-            let timeHour = hour;
-            if (isPM && hour !== 12) timeHour += 12;
-            if (!isPM && hour === 12) timeHour = 0;
-            return timeHour > currentHour;
+        const now = new Date();
+        const currentHour = now.getHours() + (now.getMinutes() / 60);
+
+        times = times.filter(timeStr => {
+            const [time, period] = timeStr.split(' ');
+            let [hour] = time.split(':').map(Number);
+            if (period === 'PM' && hour !== 12) hour += 12;
+            if (period === 'AM' && hour === 12) hour = 0;
+            return hour > currentHour;
         });
     }
 
