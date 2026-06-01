@@ -8,18 +8,13 @@
     <style>
         .date-number {
             font-weight: 700;
-            font-size: 15px;
+            font-size: 16px;
         }
-        .calendar-day {
-            transition: all 0.1s ease;
+        .navy {
+            background-color: #002B54;
         }
-        .calendar-day:hover {
-            background-color: #d1fae5;
-        }
-        .calendar-day.selected {
-            background-color: #059669;
-            color: white;
-            font-weight: 700;
+        .brand-green {
+            background-color: #10b981;
         }
     </style>
 </head>
@@ -60,55 +55,26 @@
                 <div id="selected-text" class="text-xl font-bold text-emerald-800"></div>
             </div>
 
-            <h2 class="font-bold text-2xl mb-4">Select Date &amp; Time</h2>
+            <!-- MONTH NAVIGATION -->
+            <div class="flex items-center justify-between mb-4">
+                <button onclick="prevMonth()" class="px-3 py-1 text-xl font-bold text-emerald-600 hover:text-emerald-700">←</button>
+                <div id="month-year" class="font-bold text-xl">May 2026</div>
+                <button onclick="nextMonth()" class="px-3 py-1 text-xl font-bold text-emerald-600 hover:text-emerald-700">→</button>
+            </div>
 
             <!-- CALENDAR -->
             <div class="mb-5">
-                <div class="flex justify-between items-center mb-3">
-                    <div class="font-semibold text-lg">May 2026</div>
+                <div class="grid grid-cols-7 gap-1 text-center text-sm mb-1">
+                    <div class="text-emerald-600 font-bold">S</div>
+                    <div class="text-emerald-600 font-bold">M</div>
+                    <div class="text-emerald-600 font-bold">T</div>
+                    <div class="text-emerald-600 font-bold">W</div>
+                    <div class="text-emerald-600 font-bold">T</div>
+                    <div class="text-emerald-600 font-bold">F</div>
+                    <div class="text-emerald-600 font-bold">S</div>
                 </div>
-                
-                <div class="grid grid-cols-7 gap-1 text-center">
-                    <div class="text-xs text-slate-400 py-1">S</div>
-                    <div class="text-xs text-slate-400 py-1">M</div>
-                    <div class="text-xs text-slate-400 py-1">T</div>
-                    <div class="text-xs text-slate-400 py-1">W</div>
-                    <div class="text-xs text-slate-400 py-1">T</div>
-                    <div class="text-xs text-slate-400 py-1">F</div>
-                    <div class="text-xs text-slate-400 py-1">S</div>
-
-                    <!-- Dates -->
-                    <div class="p-2 text-slate-300 date-number">26</div>
-                    <div class="p-2 text-slate-300 date-number">27</div>
-                    <div class="p-2 text-slate-300 date-number">28</div>
-                    <div class="p-2 text-slate-300 date-number">29</div>
-                    <div class="p-2 text-slate-300 date-number">30</div>
-                    <div onclick="selectDate(this, 'May 1')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">1</div>
-                    <div onclick="selectDate(this, 'May 2')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">2</div>
-                    
-                    <div onclick="selectDate(this, 'May 3')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">3</div>
-                    <div onclick="selectDate(this, 'May 4')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">4</div>
-                    <div onclick="selectDate(this, 'May 5')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">5</div>
-                    <div onclick="selectDate(this, 'May 6')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">6</div>
-                    <div onclick="selectDate(this, 'May 7')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">7</div>
-                    <div onclick="selectDate(this, 'May 8')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">8</div>
-                    <div onclick="selectDate(this, 'May 9')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">9</div>
-                    
-                    <div onclick="selectDate(this, 'May 10')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">10</div>
-                    <div onclick="selectDate(this, 'May 11')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">11</div>
-                    <div onclick="selectDate(this, 'May 12')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">12</div>
-                    <div onclick="selectDate(this, 'May 13')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">13</div>
-                    <div onclick="selectDate(this, 'May 14')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">14</div>
-                    <div onclick="selectDate(this, 'May 15')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">15</div>
-                    <div onclick="selectDate(this, 'May 16')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">16</div>
-                    
-                    <div onclick="selectDate(this, 'May 17')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">17</div>
-                    <div onclick="selectDate(this, 'May 18', true)" class="p-2 bg-emerald-600 text-white rounded-xl cursor-pointer font-bold date-number">18</div>
-                    <div onclick="selectDate(this, 'May 19')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">19</div>
-                    <div onclick="selectDate(this, 'May 20')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">20</div>
-                    <div onclick="selectDate(this, 'May 21')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">21</div>
-                    <div onclick="selectDate(this, 'May 22')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">22</div>
-                    <div onclick="selectDate(this, 'May 23')" class="p-2 hover:bg-emerald-100 rounded-xl cursor-pointer date-number">23</div>
+                <div class="grid grid-cols-7 gap-1 text-center" id="calendar-grid">
+                    <!-- Populated by JavaScript -->
                 </div>
             </div>
 
@@ -140,13 +106,13 @@
                 </div>
 
                 <div>
-                    <label class="block text-xs font-bold text-slate-600 mb-1.5">SERVICE ADDRESS</label>
-                    <input type="text" name="address" required placeholder="Enter your full address here"
+                    <label class="block text-xs font-bold text-slate-600 mb-1.5">SERVICE ADDRESS <span class="text-red-500">*</span></label>
+                    <input type="text" name="address" required placeholder="Enter your full address"
                            class="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:outline-none focus:border-emerald-500">
                 </div>
 
                 <button type="submit"
-                        class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white font-bold text-lg rounded-2xl mt-3 transition">
+                        class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-lg rounded-2xl mt-2 transition">
                     Book My FREE Estimate
                 </button>
             </form>
@@ -155,14 +121,44 @@
 </div>
 
 <script>
-let currentDate = "";
+let currentMonth = 4; // May (0-indexed)
+let currentYear = 2026;
 
-function selectDate(element, date) {
-    document.querySelectorAll('.grid-cols-7 > div').forEach(el => el.classList.remove('bg-emerald-600', 'text-white', 'font-bold'));
-    element.classList.add('bg-emerald-600', 'text-white', 'font-bold');
+function renderCalendar() {
+    const grid = document.getElementById('calendar-grid');
+    grid.innerHTML = '';
 
-    currentDate = date;
-    showTimeSlots(date);
+    const monthNames = ["January", "February", "March", "April", "May", "June", 
+                        "July", "August", "September", "October", "November", "December"];
+    
+    document.getElementById('month-year').innerText = `${monthNames[currentMonth]} ${currentYear}`;
+
+    const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+    // Empty cells before first day
+    for (let i = 0; i < firstDay; i++) {
+        const empty = document.createElement('div');
+        empty.className = 'p-2 text-slate-300';
+        grid.appendChild(empty);
+    }
+
+    // Days
+    for (let day = 1; day <= daysInMonth; day++) {
+        const dayDiv = document.createElement('div');
+        dayDiv.className = `p-3 hover:bg-emerald-100 rounded-xl cursor-pointer text-center date-number transition`;
+        dayDiv.innerText = day;
+
+        const dateStr = `${monthNames[currentMonth]} ${day}, ${currentYear}`;
+
+        dayDiv.onclick = () => {
+            document.querySelectorAll('#calendar-grid > div').forEach(d => d.classList.remove('bg-emerald-600', 'text-white'));
+            dayDiv.classList.add('bg-emerald-600', 'text-white');
+            showTimeSlots(dateStr);
+        };
+
+        grid.appendChild(dayDiv);
+    }
 }
 
 function showTimeSlots(date) {
@@ -195,6 +191,29 @@ function selectTime(element, date, time) {
     document.getElementById('selected-text').innerHTML = full;
 
     document.getElementById('hidden-selected-slot').value = full;
+}
+
+function prevMonth() {
+    currentMonth--;
+    if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+    }
+    renderCalendar();
+}
+
+function nextMonth() {
+    currentMonth++;
+    if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+    }
+    renderCalendar();
+}
+
+// Initialize
+window.onload = function() {
+    renderCalendar();
 }
 </script>
 
