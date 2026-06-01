@@ -8,47 +8,45 @@
 </head>
 <body class="bg-slate-50">
 
-<div class="max-w-5xl mx-auto p-4 md:p-6">
+<div class="max-w-5xl mx-auto p-4">
 
     <!-- Header -->
     <div class="flex justify-between items-center mb-6">
         <div class="flex items-center gap-3">
             <img src="logo ASC.png" class="h-10 w-10">
-            <span class="font-bold text-2xl tracking-tight">Amiri Solar Cleaning</span>
+            <span class="font-bold text-2xl">Amiri Solar Cleaning</span>
         </div>
-        <a href="tel:4084574067" class="flex items-center gap-2 text-sm font-medium bg-white px-4 py-2.5 rounded-2xl border border-slate-200">
-            📞 408-457-4067
-        </a>
+        <a href="tel:4084574067" class="text-sm font-medium">📞 408-457-4067</a>
     </div>
 
     <div class="grid md:grid-cols-12 gap-6">
-        
-        <!-- LEFT -->
+
+        <!-- Left Info -->
         <div class="md:col-span-5">
-            <div class="bg-white rounded-3xl p-6 border border-slate-100">
-                <div class="inline-flex px-4 py-1.5 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full mb-4">
+            <div class="bg-white rounded-3xl p-6 border">
+                <div class="inline-flex px-4 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full mb-4">
                     FIRST VISIT IS 100% FREE
                 </div>
-                <h1 class="text-4xl font-bold tracking-tight">Book Your FREE Estimate</h1>
-                <p class="mt-3 text-slate-600">No obligation. We inspect and give you a clear quote.</p>
+                <h1 class="text-4xl font-bold">Book Your FREE Estimate</h1>
+                <p class="mt-3 text-slate-600">No obligation. Professional inspection and clear quote.</p>
             </div>
         </div>
 
-        <!-- RIGHT -->
-        <div class="md:col-span-7 bg-white rounded-3xl p-6 border border-slate-100">
-            
+        <!-- Booking Area -->
+        <div class="md:col-span-7 bg-white rounded-3xl p-6 border">
+
             <div id="selected-box" class="hidden mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-2xl">
-                <div class="text-emerald-700 text-xs font-bold">YOU SELECTED</div>
+                <div class="text-emerald-700 text-xs font-bold">SELECTED SLOT</div>
                 <div id="selected-text" class="text-xl font-bold text-emerald-800"></div>
             </div>
 
-            <h2 class="font-bold text-2xl mb-4 text-slate-800">Select Date &amp; Time</h2>
+            <h2 class="text-2xl font-bold mb-4">Select Date & Time</h2>
 
             <!-- Month Navigation -->
             <div class="flex justify-between items-center mb-4">
-                <button onclick="prevMonth()" class="text-3xl text-emerald-600 hover:text-emerald-700 px-3">←</button>
+                <button onclick="prevMonth()" class="text-3xl text-emerald-600">←</button>
                 <div id="month-year" class="font-bold text-xl">May 2026</div>
-                <button onclick="nextMonth()" class="text-3xl text-emerald-600 hover:text-emerald-700 px-3">→</button>
+                <button onclick="nextMonth()" class="text-3xl text-emerald-600">→</button>
             </div>
 
             <!-- Calendar -->
@@ -56,34 +54,34 @@
 
             <!-- Time Slots -->
             <div class="mb-6">
-                <div class="text-sm font-semibold mb-3 text-slate-600">Available Times</div>
+                <div class="text-sm font-semibold mb-3">Available Times</div>
                 <div class="grid grid-cols-3 gap-3" id="time-slots"></div>
             </div>
 
-            <!-- FORM -->
-            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+            <!-- Form -->
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
                 <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
                 <input type="hidden" name="email" value="amirisolarcleaning@gmail.com">
                 <input type="hidden" name="cc" value="electronic.agent@gmail.com">
-                <input type="hidden" name="subject" value="New FREE Estimate Request">
+                <input type="hidden" name="subject" value="New FREE Estimate">
                 <input type="hidden" name="selected_slot" id="hidden-slot">
 
                 <div>
-                    <label class="block text-xs font-bold text-slate-600 mb-1.5">FULL NAME</label>
-                    <input type="text" name="name" required placeholder="John Doe" class="w-full px-4 py-3.5 border border-slate-200 rounded-2xl focus:border-emerald-500 focus:outline-none">
+                    <label class="block text-xs font-bold mb-1">FULL NAME</label>
+                    <input type="text" name="name" required placeholder="John Doe" class="w-full px-4 py-3 border rounded-2xl">
                 </div>
 
                 <div>
-                    <label class="block text-xs font-bold text-slate-600 mb-1.5">PHONE NUMBER</label>
-                    <input type="tel" name="phone" required placeholder="(408) 555-0199" class="w-full px-4 py-3.5 border border-slate-200 rounded-2xl focus:border-emerald-500 focus:outline-none">
+                    <label class="block text-xs font-bold mb-1">PHONE NUMBER</label>
+                    <input type="tel" name="phone" required placeholder="(408) 555-0199" class="w-full px-4 py-3 border rounded-2xl">
                 </div>
 
                 <div>
-                    <label class="block text-xs font-bold text-slate-600 mb-1.5">SERVICE ADDRESS</label>
-                    <input type="text" name="address" required placeholder="Enter your full address" class="w-full px-4 py-3.5 border border-slate-200 rounded-2xl focus:border-emerald-500 focus:outline-none">
+                    <label class="block text-xs font-bold mb-1">SERVICE ADDRESS</label>
+                    <input type="text" name="address" required placeholder="Enter your full address" class="w-full px-4 py-3 border rounded-2xl">
                 </div>
 
-                <button type="submit" class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-lg rounded-2xl">
+                <button type="submit" class="w-full py-4 bg-emerald-600 text-white font-bold rounded-2xl text-lg">
                     Book My FREE Estimate
                 </button>
             </form>
@@ -104,19 +102,14 @@ function renderCalendar() {
     const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
 
     for (let i = 0; i < firstDay; i++) {
-        const empty = document.createElement('div');
-        grid.appendChild(empty);
+        grid.innerHTML += `<div></div>`;
     }
 
     for (let day = 1; day <= daysInMonth; day++) {
         const cell = document.createElement('div');
         cell.className = "p-3 text-center text-lg font-bold hover:bg-emerald-100 rounded-2xl cursor-pointer";
         cell.textContent = day;
-        cell.onclick = () => {
-            document.querySelectorAll('#calendar-grid > div').forEach(d => d.classList.remove('bg-emerald-600', 'text-white'));
-            cell.classList.add('bg-emerald-600', 'text-white');
-            showTimeSlots(`May ${day}, ${currentYear}`);
-        };
+        cell.onclick = () => showTimeSlots(`May ${day}, ${currentYear}`);
         grid.appendChild(cell);
     }
 }
@@ -129,7 +122,7 @@ function showTimeSlots(date) {
 
     times.forEach(time => {
         const btn = document.createElement('button');
-        btn.className = "py-4 px-5 bg-emerald-100 hover:bg-emerald-200 text-emerald-800 font-semibold rounded-2xl text-base transition";
+        btn.className = "py-4 px-5 bg-emerald-100 hover:bg-emerald-200 text-emerald-800 font-semibold rounded-2xl transition";
         btn.textContent = time;
         btn.onclick = () => selectTime(btn, date, time);
         container.appendChild(btn);
@@ -146,17 +139,8 @@ function selectTime(btn, date, time) {
     document.getElementById('hidden-slot').value = full;
 }
 
-function prevMonth() {
-    currentMonth--;
-    if (currentMonth < 0) { currentMonth = 11; currentYear--; }
-    renderCalendar();
-}
-
-function nextMonth() {
-    currentMonth++;
-    if (currentMonth > 11) { currentMonth = 0; currentYear++; }
-    renderCalendar();
-}
+function prevMonth() { currentMonth--; if (currentMonth < 0) { currentMonth = 11; currentYear--; } renderCalendar(); }
+function nextMonth() { currentMonth++; if (currentMonth > 11) { currentMonth = 0; currentYear++; } renderCalendar(); }
 
 window.onload = renderCalendar;
 </script>
