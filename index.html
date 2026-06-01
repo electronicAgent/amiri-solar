@@ -42,8 +42,8 @@
                 <h2 class="font-bold text-2xl text-white">Select Date & Time</h2>
             </div>
 
-            <!-- Light Blue Calendar Area -->
-            <div class="p-6" style="background-color: #bae6fd;">
+            <!-- Water Blue Background -->
+            <div class="p-6" style="background-color: #67e8f9;">
 
                 <div id="selected-box" class="hidden mb-6 p-4 bg-white border border-emerald-200 rounded-2xl">
                     <div class="text-emerald-700 text-xs font-bold">YOU SELECTED</div>
@@ -66,33 +66,35 @@
                     <div class="grid grid-cols-3 gap-3" id="time-slots"></div>
                 </div>
 
-                <!-- FORM - Stacked fields -->
-                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                    <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
-                    <input type="hidden" name="email" value="amirisolarcleaning@gmail.com">
-                    <input type="hidden" name="cc" value="electronic.agent@gmail.com">
-                    <input type="hidden" name="subject" value="New FREE Estimate Request - Amiri Solar Cleaning">
-                    <input type="hidden" name="selected_slot" id="hidden-slot">
+                <!-- FORM -->
+                <div id="form-section">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                        <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
+                        <input type="hidden" name="email" value="amirisolarcleaning@gmail.com">
+                        <input type="hidden" name="cc" value="electronic.agent@gmail.com">
+                        <input type="hidden" name="subject" value="New FREE Estimate Request - Amiri Solar Cleaning">
+                        <input type="hidden" name="selected_slot" id="hidden-slot">
 
-                    <div>
-                        <label class="block text-xs font-bold mb-1" style="color: #002B54;">FULL NAME <span class="text-red-500">*</span></label>
-                        <input type="text" name="name" required placeholder="John Doe" class="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:border-emerald-500 focus:outline-none">
-                    </div>
+                        <div>
+                            <label class="block text-xs font-bold mb-1" style="color: #002B54;">FULL NAME <span class="text-red-500">*</span></label>
+                            <input type="text" name="name" required placeholder="John Doe" class="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:border-emerald-500 focus:outline-none">
+                        </div>
 
-                    <div>
-                        <label class="block text-xs font-bold mb-1" style="color: #002B54;">PHONE NUMBER <span class="text-red-500">*</span></label>
-                        <input type="tel" name="phone" required placeholder="(408) 555-0199" class="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:border-emerald-500 focus:outline-none">
-                    </div>
+                        <div>
+                            <label class="block text-xs font-bold mb-1" style="color: #002B54;">PHONE NUMBER <span class="text-red-500">*</span></label>
+                            <input type="tel" name="phone" required placeholder="(408) 555-0199" class="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:border-emerald-500 focus:outline-none">
+                        </div>
 
-                    <div>
-                        <label class="block text-xs font-bold mb-1" style="color: #002B54;">SERVICE ADDRESS <span class="text-red-500">*</span></label>
-                        <input type="text" name="address" required placeholder="Enter your full address" class="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:border-emerald-500 focus:outline-none">
-                    </div>
+                        <div>
+                            <label class="block text-xs font-bold mb-1" style="color: #002B54;">SERVICE ADDRESS <span class="text-red-500">*</span></label>
+                            <input type="text" name="address" required placeholder="Enter your full address" class="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:border-emerald-500 focus:outline-none">
+                        </div>
 
-                    <button type="submit" class="w-full py-4 text-white font-bold rounded-2xl text-lg transition" style="background-color: #10b981;">
-                        Book My FREE Estimate
-                    </button>
-                </form>
+                        <button type="submit" class="w-full py-4 text-white font-bold rounded-2xl text-lg transition" style="background-color: #10b981;">
+                            Book My FREE Estimate
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -165,6 +167,7 @@ function selectTime(btn, date, time) {
     document.getElementById('selected-text').innerHTML = full;
     document.getElementById('hidden-slot').value = full;
 
+    // Scroll to form after selecting time
     setTimeout(() => {
         document.getElementById('form-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 400);
