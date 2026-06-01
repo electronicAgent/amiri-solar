@@ -74,7 +74,7 @@
 
                 <!-- FORM -->
                 <div id="form-section">
-                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+                    <form id="booking-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
                         <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
                         <input type="hidden" name="subject" value="New FREE Estimate Request - Amiri Solar Cleaning">
                         <input type="hidden" name="selected_slot" id="hidden-slot">
@@ -126,22 +126,33 @@
 <script>
 let currentDate = new Date();
 
-document.getElementById('booking-form').addEventListener('submit', function() {
-    setTimeout(function() {
-        const form = document.getElementById('booking-form');
-        const nameField = form.querySelector('input[name="name"]');
-        const customerName = nameField ? nameField.value.split(' ')[0] : "there";
-        const selectedSlot = document.getElementById('hidden-slot').value || "";
+// Wait until the page is fully loaded before attaching events
+window.onload = function() {
+    // Attach form submit event
+    const form = document.getElementById('booking-form');
+    if (form) {
+        form.addEventListener('submit', function() {
+            setTimeout(function() {
+                const nameField = form.querySelector('input[name="name"]');
+                const customerName = nameField ? nameField.value.split(' ')[0] : "there";
+                const selectedSlot = document.getElementById('hidden-slot').value || "";
 
-        document.getElementById('form-section').classList.add('hidden');
-        document.getElementById('success-message').classList.remove('hidden');
-        document.getElementById('customer-name').textContent = customerName;
-        document.getElementById('confirmed-slot').textContent = selectedSlot;
-    }, 800);
-});
+                document.getElementById('form-section').classList.add('hidden');
+                document.getElementById('success-message').classList.remove('hidden');
+                document.getElementById('customer-name').textContent = customerName;
+                document.getElementById('confirmed-slot').textContent = selectedSlot;
+            }, 800);
+        });
+    }
+
+    // Render the calendar
+    renderCalendar();
+};
 
 function renderCalendar() {
     const grid = document.getElementById('calendar-grid');
+    if (!grid) return;
+
     grid.innerHTML = '';
 
     const year = currentDate.getFullYear();
@@ -183,6 +194,7 @@ function renderCalendar() {
 
 function showTimeSlots(dateStr, isToday = false) {
     const container = document.getElementById('time-slots');
+    if (!container) return;
     container.innerHTML = '';
 
     let times = ["06:00 AM", "07:00 AM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "01:00 PM", "02:00 PM", "03:00 PM"];
@@ -240,8 +252,6 @@ function nextMonth() {
     currentDate.setMonth(currentDate.getMonth() + 1);
     renderCalendar();
 }
-
-window.onload = renderCalendar;
 </script>
 
 </body>
