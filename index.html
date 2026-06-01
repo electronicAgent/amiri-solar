@@ -63,7 +63,7 @@
                     <button onclick="nextMonth()" class="text-4xl text-emerald-600">→</button>
                 </div>
 
-                <!-- Calendar -->
+                <!-- Calendar Grid -->
                 <div class="grid grid-cols-7 gap-2 text-center mb-8" id="calendar-grid"></div>
 
                 <!-- Time Slots -->
@@ -124,11 +124,12 @@
 </div>
 
 <script>
-let currentDate = new Date();
-
-// Wait until the page is fully loaded before attaching events
+// This runs only after the full page is loaded
 window.onload = function() {
-    // Attach form submit event
+    // Render calendar
+    renderCalendar();
+
+    // Form submission success message
     const form = document.getElementById('booking-form');
     if (form) {
         form.addEventListener('submit', function() {
@@ -144,10 +145,9 @@ window.onload = function() {
             }, 800);
         });
     }
-
-    // Render the calendar
-    renderCalendar();
 };
+
+let currentDate = new Date();
 
 function renderCalendar() {
     const grid = document.getElementById('calendar-grid');
