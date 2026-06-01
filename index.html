@@ -68,15 +68,10 @@
                     <div class="grid grid-cols-3 gap-3" id="time-slots"></div>
                 </div>
 
-                <!-- FORM - Web3Forms + Make.com Webhook -->
+                <!-- FORM -->
                 <div id="form-section">
-                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+                    <form id="booking-form" class="space-y-5">
                         
-                        <!-- Web3Forms Access Key -->
-                        <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
-                        <input type="hidden" name="subject" value="New FREE Estimate Request - Amiri Solar Cleaning">
-                        
-                        <!-- Make.com Webhook (add this URL in Web3Forms dashboard under Webhook settings) -->
                         <input type="hidden" name="selected_slot" id="hidden-slot">
 
                         <div>
@@ -107,6 +102,35 @@
 <script>
 let currentDate = new Date();
 
+// ================== FORM SUBMISSION TO MAKE.COM ==================
+document.getElementById('booking-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    // Make.com Webhook URL
+    const webhookURL = "https://hook.us2.make.com/sun95bfxtwufm1vpnao04293rr35izk";
+
+    try {
+        const response = await fetch(webhookURL, {
+            method: "POST",
+            body: formData
+        });
+
+        if (response.ok) {
+            alert("Thank you! Your booking request has been submitted. We will call you soon.");
+            form.reset();
+            document.getElementById('selected-box').classList.add('hidden');
+        } else {
+            alert("Something went wrong. Please try again or call us directly.");
+        }
+    } catch (error) {
+        alert("Submission failed. Please try again.");
+    }
+});
+
+// ================== CALENDAR + TIME SLOT LOGIC ==================
 function renderCalendar() {
     const grid = document.getElementById('calendar-grid');
     grid.innerHTML = '';
