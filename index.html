@@ -11,97 +11,113 @@
 <div class="max-w-5xl mx-auto p-4 md:p-8">
 
     <!-- Header -->
-    <div class="flex justify-between items-center mb-8">
+    <div class="flex justify-between items-center mb-6">
         <div class="flex items-center gap-3">
             <img src="logo ASC.png" class="h-9 w-9">
             <span class="font-bold text-2xl">Amiri Solar Cleaning</span>
         </div>
-        <a href="tel:4084574067" class="text-sm font-medium flex items-center gap-2">
-            📞 408-457-4067
-        </a>
+        <a href="tel:4084574067" class="text-sm font-medium">📞 408-457-4067</a>
     </div>
 
-    <div class="grid md:grid-cols-12 gap-8">
+    <div class="grid md:grid-cols-12 gap-6">
         
-        <!-- LEFT INFO -->
+        <!-- LEFT INFO (stacks on mobile) -->
         <div class="md:col-span-5">
-            <div class="bg-white rounded-3xl p-8 border border-slate-100">
-                <div class="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full mb-4">
+            <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-100">
+                <div class="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full mb-3">
                     FIRST VISIT IS 100% FREE
                 </div>
-                
-                <h1 class="text-4xl font-bold tracking-tight">Book Your FREE Estimate</h1>
-                <p class="mt-3 text-slate-600">No obligation. We inspect and give you a clear quote.</p>
-
-                <div class="mt-8 space-y-3 text-sm">
-                    <div class="flex gap-3">✓ 100% pure water — zero chemicals</div>
-                    <div class="flex gap-3">✓ Safe for panels, plants &amp; pets</div>
-                    <div class="flex gap-3">✓ Confirmed by phone within 24 hrs</div>
-                </div>
+                <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Book Your FREE Estimate</h1>
+                <p class="mt-2 text-slate-600">No obligation. We inspect and give you a clear quote.</p>
             </div>
         </div>
 
-        <!-- RIGHT: BOOKING -->
-        <div class="md:col-span-7 bg-white rounded-3xl p-8 border border-slate-100">
+        <!-- RIGHT: Calendar + Form -->
+        <div class="md:col-span-7 bg-white rounded-3xl p-6 md:p-8 border border-slate-100">
             
-            <!-- SELECTED SLOT DISPLAY -->
-            <div id="selected-slot-box" class="hidden mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-2xl">
+            <!-- SELECTED TIME DISPLAY -->
+            <div id="selected-box" class="hidden mb-5 p-4 bg-emerald-50 border border-emerald-200 rounded-2xl">
                 <div class="text-emerald-700 text-sm font-semibold">YOU SELECTED</div>
-                <div id="selected-slot-text" class="text-xl font-bold text-emerald-800"></div>
+                <div id="selected-text" class="text-lg font-bold text-emerald-800"></div>
             </div>
 
-            <h2 class="text-2xl font-bold mb-1">Lock in your FREE estimate slot</h2>
-            <p class="text-slate-600 mb-6 text-sm">Just fill your details below. We’ll call to confirm.</p>
+            <h2 class="font-bold text-xl mb-3">Select Date &amp; Time</h2>
+
+            <!-- TIME SLOTS (Mobile friendly) -->
+            <div class="mb-6">
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 gap-3" id="time-slots">
+                    <!-- Time slots added by JavaScript below -->
+                </div>
+            </div>
 
             <!-- FORM -->
-            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
                 
                 <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
                 <input type="hidden" name="email" value="amirisolarcleaning@gmail.com">
                 <input type="hidden" name="cc" value="electronic.agent@gmail.com">
-                <input type="hidden" name="subject" value="New FREE Estimate Booking - Amiri Solar Cleaning">
-                <input type="hidden" name="selected_slot" id="hidden-selected-slot">
+                <input type="hidden" name="subject" value="New FREE Estimate - Amiri Solar Cleaning">
+                <input type="hidden" name="selected_slot" id="hidden-slot">
 
                 <div>
-                    <label class="block text-xs font-bold text-slate-600 mb-1.5">FULL NAME</label>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">FULL NAME</label>
                     <input type="text" name="name" required placeholder="John Doe"
-                           class="w-full px-4 py-3.5 border border-slate-200 rounded-2xl text-lg focus:outline-none focus:border-emerald-500">
+                           class="w-full px-4 py-3 border border-slate-200 rounded-2xl text-base focus:outline-none focus:border-emerald-500">
                 </div>
 
                 <div>
-                    <label class="block text-xs font-bold text-slate-600 mb-1.5">PHONE NUMBER</label>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">PHONE NUMBER</label>
                     <input type="tel" name="phone" required placeholder="(408) 555-0199"
-                           class="w-full px-4 py-3.5 border border-slate-200 rounded-2xl text-lg focus:outline-none focus:border-emerald-500">
+                           class="w-full px-4 py-3 border border-slate-200 rounded-2xl text-base focus:outline-none focus:border-emerald-500">
                 </div>
 
                 <div>
-                    <label class="block text-xs font-bold text-slate-600 mb-1.5">SERVICE ADDRESS</label>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">SERVICE ADDRESS</label>
                     <input type="text" name="address" value="996 Almaden Lake Dr 103, San Jose, CA 95123" required
-                           class="w-full px-4 py-3.5 border border-slate-200 rounded-2xl text-lg focus:outline-none focus:border-emerald-500">
+                           class="w-full px-4 py-3 border border-slate-200 rounded-2xl text-base focus:outline-none focus:border-emerald-500">
                 </div>
 
                 <button type="submit"
-                        class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white font-bold text-lg rounded-2xl mt-2 transition">
+                        class="w-full py-4 bg-emerald-600 active:bg-emerald-700 text-white font-bold text-lg rounded-2xl mt-2">
                     Book My FREE Estimate
                 </button>
-
-                <p class="text-center text-xs text-slate-500">We’ll call you within 24 hours to confirm your slot.</p>
             </form>
         </div>
     </div>
 </div>
 
 <script>
-// This function should be called when user clicks a time slot
-function selectTimeSlot(date, time) {
-    const box = document.getElementById('selected-slot-box');
-    const text = document.getElementById('selected-slot-text');
-    const hidden = document.getElementById('hidden-selected-slot');
+function selectSlot(element, dateTime) {
+    // Highlight selected
+    document.querySelectorAll('#time-slots button').forEach(b => b.classList.remove('ring-2', 'ring-emerald-600', 'bg-emerald-600', 'text-white'));
+    element.classList.add('ring-2', 'ring-emerald-600', 'bg-emerald-600', 'text-white');
 
-    text.innerHTML = `${date} at <span class="text-emerald-600">${time}</span>`;
-    hidden.value = `${date} @ ${time}`;
-    box.classList.remove('hidden');
-    box.classList.add('flex', 'items-center', 'gap-3');
+    // Show selected time
+    document.getElementById('selected-box').classList.remove('hidden');
+    document.getElementById('selected-text').innerHTML = dateTime;
+
+    // Set hidden field
+    document.getElementById('hidden-slot').value = dateTime;
+}
+
+// Load time slots
+window.onload = function() {
+    const container = document.getElementById('time-slots');
+    const times = ["08:00 AM", "08:15 AM", "10:00 AM", "11:15 AM", "01:40 PM", "03:00 PM"];
+    
+    times.forEach(time => {
+        const btn = document.createElement('button');
+        btn.type = "button";
+        btn.className = "py-3.5 px-4 bg-emerald-100 hover:bg-emerald-200 active:bg-emerald-300 text-emerald-800 font-semibold rounded-2xl text-sm transition";
+        btn.innerText = time;
+        
+        btn.onclick = () => {
+            // You can change the date dynamically later
+            selectSlot(btn, `May 18, 2026 @ ${time}`);
+        };
+        
+        container.appendChild(btn);
+    });
 }
 </script>
 
