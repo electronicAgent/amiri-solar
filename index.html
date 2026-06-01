@@ -50,20 +50,19 @@
 
             <div class="p-8" style="background-color: #67e8f9;">
 
-                <!-- Selected Box -->
+                <!-- Selected Slot -->
                 <div id="selected-box" class="hidden mb-8 p-6 bg-white border border-emerald-200 rounded-3xl">
                     <div class="text-emerald-700 text-sm font-bold">YOU SELECTED</div>
                     <div id="selected-text" class="text-2xl font-bold text-emerald-800"></div>
                 </div>
 
-                <!-- Calendar Navigation -->
+                <!-- Calendar -->
                 <div class="flex justify-between items-center mb-6">
                     <button onclick="prevMonth()" class="text-4xl text-emerald-600">←</button>
                     <div id="month-year" class="font-bold text-2xl" style="color: #002B54;"></div>
                     <button onclick="nextMonth()" class="text-4xl text-emerald-600">→</button>
                 </div>
 
-                <!-- Calendar Grid -->
                 <div class="grid grid-cols-7 gap-2 text-center mb-8" id="calendar-grid"></div>
 
                 <!-- Time Slots -->
@@ -76,7 +75,6 @@
                 <div id="form-section">
                     <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
                         
-                        <!-- Web3Forms -->
                         <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
                         <input type="hidden" name="subject" value="New FREE Estimate Request - Amiri Solar Cleaning">
                         <input type="hidden" name="selected_slot" id="hidden-slot">
@@ -128,23 +126,21 @@
 <script>
 let currentDate = new Date();
 
-// Form submission with nice success message
-document.getElementById('booking-form').addEventListener('submit', function(e) {
-    // Let Web3Forms handle the submission normally
-    // We show success message after form posts
-    setTimeout(() => {
+// Show nice success message after Web3Forms submission
+document.getElementById('booking-form').addEventListener('submit', function() {
+    setTimeout(function() {
         const form = document.getElementById('booking-form');
-        const customerName = form.querySelector('input[name="name"]').value;
-        const selectedSlot = document.getElementById('hidden-slot').value;
+        const nameField = form.querySelector('input[name="name"]');
+        const customerName = nameField ? nameField.value : "there";
+        const selectedSlot = document.getElementById('hidden-slot').value || "";
 
         document.getElementById('form-section').classList.add('hidden');
         document.getElementById('success-message').classList.remove('hidden');
         document.getElementById('customer-name').textContent = customerName.split(' ')[0];
         document.getElementById('confirmed-slot').textContent = selectedSlot;
-    }, 800);
+    }, 900);
 });
 
-// Calendar functions
 function renderCalendar() {
     const grid = document.getElementById('calendar-grid');
     grid.innerHTML = '';
