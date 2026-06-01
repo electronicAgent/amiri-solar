@@ -58,11 +58,9 @@
                 <div class="grid grid-cols-3 gap-3" id="time-slots"></div>
             </div>
 
-            <!-- FORM -->
-            <form id="booking-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+            <!-- FORM - Simple submission -->
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
                 <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
-                
-                <!-- Important: Keep these for routing -->
                 <input type="hidden" name="email" value="amirisolarcleaning@gmail.com">
                 <input type="hidden" name="cc" value="electronic.agent@gmail.com">
                 <input type="hidden" name="subject" value="New FREE Estimate Request - Amiri Solar Cleaning">
@@ -87,34 +85,6 @@
                     Book My FREE Estimate
                 </button>
             </form>
-        </div>
-    </div>
-
-    <!-- SUCCESS MESSAGE -->
-    <div id="success-message" class="hidden max-w-2xl mx-auto mt-8">
-        <div class="bg-white rounded-3xl p-8 border text-center">
-            <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-                </svg>
-            </div>
-            <h2 class="text-2xl font-bold mb-2">Booking Request Received!</h2>
-            <p class="text-emerald-700 font-semibold mb-4" id="success-slot"></p>
-            
-            <div class="text-left bg-slate-50 p-5 rounded-2xl mb-6 text-sm">
-                <p class="font-bold mb-2">What happens next:</p>
-                <ul class="list-disc pl-5 space-y-1 text-slate-600">
-                    <li>We will call you within 24 hours to confirm your slot.</li>
-                    <li>Please have your property address and access details ready.</li>
-                    <li>We will inspect your solar panels / windows / glass and provide a clear quote.</li>
-                </ul>
-            </div>
-
-            <div class="text-sm text-slate-600">
-                <p class="font-semibold">Amiri Solar Cleaning</p>
-                <p>Professional • Reliable • Eco-Friendly</p>
-                <p class="mt-1">100% pure water • Zero chemicals • Safe for panels, plants & pets</p>
-            </div>
         </div>
     </div>
 </div>
@@ -201,13 +171,6 @@ function nextMonth() {
     currentDate.setMonth(currentDate.getMonth() + 1);
     renderCalendar();
 }
-
-// Simple form submission (more reliable)
-document.getElementById('booking-form').addEventListener('submit', function(e) {
-    const btn = e.target.querySelector('button');
-    btn.innerHTML = 'Submitting...';
-    btn.disabled = true;
-});
 
 window.onload = renderCalendar;
 </script>
