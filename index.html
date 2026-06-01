@@ -21,26 +21,27 @@
 
     <div class="grid md:grid-cols-12 gap-6">
 
-        <!-- Left Info -->
+        <!-- LEFT -->
         <div class="md:col-span-5">
             <div class="bg-white rounded-3xl p-6 border">
                 <div class="inline-flex px-4 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full mb-4">
                     FIRST VISIT IS 100% FREE
                 </div>
                 <h1 class="text-4xl font-bold">Book Your FREE Estimate</h1>
-                <p class="mt-3 text-slate-600">No obligation. Professional inspection and clear quote.</p>
+                <p class="mt-3 text-slate-600">No obligation. We inspect and give you a clear quote.</p>
             </div>
         </div>
 
-        <!-- Booking Area -->
+        <!-- RIGHT -->
         <div class="md:col-span-7 bg-white rounded-3xl p-6 border">
 
+            <!-- Selected Slot -->
             <div id="selected-box" class="hidden mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-2xl">
-                <div class="text-emerald-700 text-xs font-bold">SELECTED SLOT</div>
+                <div class="text-emerald-700 text-xs font-bold">YOU SELECTED</div>
                 <div id="selected-text" class="text-xl font-bold text-emerald-800"></div>
             </div>
 
-            <h2 class="text-2xl font-bold mb-4">Select Date & Time</h2>
+            <h2 class="font-bold text-2xl mb-4">Select Date & Time</h2>
 
             <!-- Month Navigation -->
             <div class="flex justify-between items-center mb-4">
@@ -52,18 +53,18 @@
             <!-- Calendar -->
             <div class="grid grid-cols-7 gap-1 text-center mb-6" id="calendar-grid"></div>
 
-            <!-- Time Slots -->
+            <!-- Time Slots (appear after selecting date) -->
             <div class="mb-6">
                 <div class="text-sm font-semibold mb-3">Available Times</div>
                 <div class="grid grid-cols-3 gap-3" id="time-slots"></div>
             </div>
 
-            <!-- Form -->
+            <!-- FORM -->
             <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
                 <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
                 <input type="hidden" name="email" value="amirisolarcleaning@gmail.com">
                 <input type="hidden" name="cc" value="electronic.agent@gmail.com">
-                <input type="hidden" name="subject" value="New FREE Estimate">
+                <input type="hidden" name="subject" value="New FREE Estimate Request - Amiri Solar Cleaning">
                 <input type="hidden" name="selected_slot" id="hidden-slot">
 
                 <div>
@@ -101,15 +102,17 @@ function renderCalendar() {
     const firstDay = new Date(currentYear, currentMonth, 1).getDay();
     const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
 
-    for (let i = 0; i < firstDay; i++) {
-        grid.innerHTML += `<div></div>`;
-    }
+    for (let i = 0; i < firstDay; i++) grid.innerHTML += `<div></div>`;
 
     for (let day = 1; day <= daysInMonth; day++) {
         const cell = document.createElement('div');
         cell.className = "p-3 text-center text-lg font-bold hover:bg-emerald-100 rounded-2xl cursor-pointer";
         cell.textContent = day;
-        cell.onclick = () => showTimeSlots(`May ${day}, ${currentYear}`);
+        cell.onclick = () => {
+            document.querySelectorAll('#calendar-grid > div').forEach(d => d.classList.remove('bg-emerald-600', 'text-white'));
+            cell.classList.add('bg-emerald-600', 'text-white');
+            showTimeSlots(`May ${day}, ${currentYear}`);
+        };
         grid.appendChild(cell);
     }
 }
