@@ -68,10 +68,15 @@
                     <div class="grid grid-cols-3 gap-3" id="time-slots"></div>
                 </div>
 
-                <!-- FORM SENDS TO MAKE.COM -->
+                <!-- FORM - Web3Forms + Make.com Webhook -->
                 <div id="form-section">
-                    <form action="https://hook.us2.make.com/sun95bfxtwufm1vpnao04293rr35izk" method="POST" class="space-y-5">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
                         
+                        <!-- Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="b94d8c1f-1b42-4f44-920d-5975e5fdc6c6">
+                        <input type="hidden" name="subject" value="New FREE Estimate Request - Amiri Solar Cleaning">
+                        
+                        <!-- Make.com Webhook (add this URL in Web3Forms dashboard under Webhook settings) -->
                         <input type="hidden" name="selected_slot" id="hidden-slot">
 
                         <div>
