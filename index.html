@@ -129,21 +129,22 @@ window.onload = function() {
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
 
-        const formData = new FormData(form);
-        const customerName = formData.get('name');
-        const selectedSlot = formData.get('selected_slot');
+        const customerName = form.querySelector('input[name="name"]').value;
+        const selectedSlot = form.querySelector('#hidden-slot').value;
 
         try {
-            // 1. Send to Web3Forms (for email + nice success message)
+            // 1. Send to Web3Forms (email + success message)
+            const formData1 = new FormData(form);
             await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                body: formData
+                body: formData1
             });
 
-            // 2. ALSO send to Make.com (for Google Calendar)
+            // 2. Send to Make.com (for Google Calendar)
+            const formData2 = new FormData(form);
             await fetch('https://hook.us2.make.com/sun95bfxtwufm1vpnao04293rr35izk', {
                 method: 'POST',
-                body: formData
+                body: formData2
             });
 
             // Show success message
@@ -154,6 +155,7 @@ window.onload = function() {
             document.getElementById('confirmed-slot').textContent = selectedSlot;
 
         } catch (error) {
+            console.error(error);
             alert("Submission failed. Please try again or call 408-457-4067.");
         }
     });
