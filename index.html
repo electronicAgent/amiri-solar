@@ -201,9 +201,13 @@
         </a>
     </footer>
     <script>
-        let displayDate = new Date(2026, 4, 18);
-        let selectedDate = new Date(2026, 4, 18);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        let displayDate = new Date(today.getFullYear(), today.getMonth(), 1);
+        let selectedDate = new Date(today);
         let selectedTimeSlot = "";
+        function ordinal(n){const s=["th","st","nd","rd"],v=n%100;return n+(s[(v-20)%10]||s[v]||s[0]);}
+        function slotToMinutes(t){let[hm,ap]=t.split(' ');let[h,m]=hm.split(':').map(Number);if(ap==='PM'&&h!==12)h+=12;if(ap==='AM'&&h===12)h=0;return h*60+m;}
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         const views = {
@@ -247,17 +251,23 @@
             for (let day = 1; day <= lastDay; day++) {
                 const dayDiv = document.createElement('div');
                 dayDiv.innerText = day;
+                const cellDate = new Date(year, month, day);
+                const isPast = cellDate < today;
                 const isSelected = selectedDate.getDate() === day && selectedDate.getMonth() === month && selectedDate.getFullYear() === year;
-                if (isSelected) {
+                if (isPast) {
+                    dayDiv.className = 'p-2 text-slate-500/40 line-through select-none cursor-not-allowed';
+                } else if (isSelected) {
                     dayDiv.className = 'p-2 text-slate-900 bg-brand-leafGreen rounded-full cursor-pointer shadow-md font-bold';
                 } else {
                     dayDiv.className = 'p-2 text-slate-100 cursor-pointer hover:bg-white/10 rounded-full transition';
                 }
-                dayDiv.addEventListener('click', () => {
-                    selectedDate = new Date(year, month, day);
-                    renderCalendar();
-                    renderSlots();
-                });
+                if (!isPast) {
+                    dayDiv.addEventListener('click', () => {
+                        selectedDate = new Date(year, month, day);
+                        renderCalendar();
+                        renderSlots();
+                    });
+                }
                 containers.days.appendChild(dayDiv);
             }
             const totalCells = firstDayIndex + lastDay;
@@ -271,10 +281,19 @@
         }
         function renderSlots() {
             const dayOfWeekName = weekdays[selectedDate.getDay()];
-            const dayNum = selectedDate.getDate();
-            labels.slotsHeader.innerText = `Available Slots — ${dayOfWeekName} ${dayNum}th`;
-            const slotsData = ["08:00 AM", "08:15 AM", "10:00 AM", "11:15 AM", "01:40 PM", "03:00 PM"];
+            labels.slotsHeader.innerText = `Available Slots — ${dayOfWeekName} ${ordinal(selectedDate.getDate())}`;
+            let slotsData = ["08:00 AM", "08:15 AM", "10:00 AM", "11:15 AM", "01:40 PM", "03:00 PM"];
+            const isToday = selectedDate.getFullYear() === today.getFullYear() && selectedDate.getMonth() === today.getMonth() && selectedDate.getDate() === today.getDate();
+            if (isToday) {
+                const now = new Date();
+                const nowMin = now.getHours() * 60 + now.getMinutes();
+                slotsData = slotsData.filter(t => slotToMinutes(t) > nowMin);
+            }
             containers.slots.innerHTML = '';
+            if (slotsData.length === 0) {
+                containers.slots.innerHTML = '<p class="col-span-full text-xs text-slate-300 py-2">No more slots available today — please pick another day.</p>';
+                return;
+            }
             slotsData.forEach(time => {
                 const btn = document.createElement('button');
                 btn.className = 'py-3 px-4 bg-brand-leafGreen text-slate-900 font-bold rounded-lg text-sm tracking-wide text-center hover:bg-lime-400 active:scale-[0.98] transition-all duration-150 shadow-md';
@@ -288,12 +307,18 @@
             });
         }
         function navigateToForm() {
-            const dateString = `${weekdays[selectedDate.getDay()]} ${selectedDate.getDate()}th`;
+            const dateString = `${weekdays[selectedDate.getDay()]}, ${months[selectedDate.getMonth()]} ${ordinal(selectedDate.getDate())}, ${selectedDate.getFullYear()}`;
             labels.formDetails.innerText = `You are reserving a slot on ${dateString} at ${selectedTimeSlot}`;
             containers.hiddenInput.value = `${dateString} @ ${selectedTimeSlot}`;
             switchView('form');
         }
-        document.getElementById('prev-month').addEventListener('click', () => { displayDate.setMonth(displayDate.getMonth() - 1); renderCalendar(); });
+        document.getElementById('prev-month').addEventListener('click', () => {
+            const firstOfThisMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+            const target = new Date(displayDate.getFullYear(), displayDate.getMonth() - 1, 1);
+            if (target < firstOfThisMonth) return;
+            displayDate.setMonth(displayDate.getMonth() - 1);
+            renderCalendar();
+        });
         document.getElementById('next-month').addEventListener('click', () => { displayDate.setMonth(displayDate.getMonth() + 1); renderCalendar(); });
         document.getElementById('back-to-calendar').addEventListener('click', () => switchView('calendar'));
         document.getElementById('reset-booking-engine').addEventListener('click', () => { document.getElementById('intake-form').reset(); initApp(); switchView('calendar'); });
