@@ -347,7 +347,10 @@
             .then(response => {
                 if (response.ok) {
                     const clientPhone = document.querySelector('input[name="phone"]').value || "your number";
-                    labels.successMessage.innerHTML = `Your slot for <span class="text-brand-skyBlue font-semibold">${selectedTimeSlot}</span> is on hold. A team specialist will call you shortly at <span class="text-brand-deepBlue font-bold">${clientPhone}</span> to confirm the details.`;
+                    const rawName = (document.querySelector('input[name="name"]').value || "").trim();
+                    const firstName = rawName ? rawName.split(' ')[0] : "there";
+                    const fullDate = `${weekdays[selectedDate.getDay()]}, ${months[selectedDate.getMonth()]} ${ordinal(selectedDate.getDate())}, ${selectedDate.getFullYear()}`;
+                    labels.successMessage.innerHTML = `Thank you, <span class="text-brand-deepBlue font-bold">${firstName}</span>! Your appointment for <span class="text-brand-skyBlue font-semibold">${fullDate} at ${selectedTimeSlot}</span> is on hold. We&rsquo;ll call you at <span class="text-brand-deepBlue font-bold">${clientPhone}</span> within 24 hours to confirm the details.`;
                     formEl.classList.add('hidden');
                     summaryEl.classList.add('hidden');
                     successEl.classList.remove('hidden');
